@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan's AI Setup | Personal AI Assistant Installation & Consulting</title>
+    <meta name="description" content="Get a real AI assistant installed on your computer that accesses your tools, remembers everything, and works 24/7. One-time setup, no subscriptions. Serving businesses locally and remotely.">
+    <meta property="og:title" content="Ryan's AI Setup | Your Own AI Assistant, Installed and Ready">
+    <meta property="og:description" content="Stop dabbling with ChatGPT. Get a real AI assistant that knows your business, accesses your tools, and works around the clock.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4F46E5;
+            --primary-dark: #3730A3;
+            --primary-light: #818CF8;
+            --accent: #F59E0B;
+            --accent-hover: #D97706;
+            --dark: #111827;
+            --dark-light: #1F2937;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-400: #9CA3AF;
+            --gray-500: #6B7280;
+            --gray-600: #4B5563;
+            --gray-700: #374151;
+            --gray-800: #1F2937;
+            --green: #10B981;
+            --radius: 12px;
+        }
+
+        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background: #fff;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+        /* ── NAV ── */
+        .nav {
+            background: var(--dark);
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .nav .brand { color: #fff; font-size: 1.2rem; font-weight: 800; text-decoration: none; letter-spacing: -0.02em; }
+        .nav .brand span { color: var(--primary-light); }
+        .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+        .nav-links a { color: var(--gray-400); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
+        .nav-links a:hover { color: #fff; }
+        .nav-links .nav-cta {
+            background: var(--accent);
+            color: var(--dark) !important;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+        }
+        .nav-links .nav-cta:hover { background: var(--accent-hover); }
+
+        /* Mobile menu */
+        .menu-toggle { display: none; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; }
+
+        /* ── HERO ── */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #7C3AED 50%, #9333EA 100%);
+            color: #fff;
+            padding: 100px 24px 90px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.06) 0%, transparent 50%);
+        }
+        .hero .container { position: relative; z-index: 1; }
+        .hero .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 28px;
+            backdrop-filter: blur(10px);
+        }
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 24px;
+            letter-spacing: -0.03em;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero .subheadline {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            opacity: 0.92;
+            max-width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+        .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 36px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: var(--dark);
+            box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+        }
+        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5); }
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.4);
+        }
+        .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.6); }
+        .btn-dark {
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3);
+        }
+        .btn-dark:hover { background: var(--primary-dark); transform: translateY(-2px); }
+
+        /* ── TRUST BAR ── */
+        .trust-bar {
+            background: var(--dark);
+            padding: 18px 24px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .trust-item { color: var(--gray-400); font-size: 0.9rem; font-weight: 500; display: flex; align-items: center; gap: 8px; }
+        .trust-item .icon { color: var(--green); font-size: 1.1rem; }
+
+        /* ── SECTION STYLES ── */
+        .section { padding: 90px 24px; }
+        .section-gray { background: var(--gray-50); }
+        .section-dark { background: var(--dark); color: #fff; }
+        .section-title {
+            font-size: 2.4rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        .section-sub {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--gray-500);
+            margin-bottom: 56px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .section-dark .section-sub { color: var(--gray-400); }
+
+        /* ── PROBLEM SECTION ── */
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto 40px;
+        }
+        .problem-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 20px;
+            background: #fff;
+            border-radius: var(--radius);
+            border: 1px solid var(--gray-200);
+        }
+        .problem-card .x { color: #EF4444; font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+        .problem-card p { font-size: 1.05rem; color: var(--gray-700); }
+        .solution-line {
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-top: 20px;
+        }
+
+        /* ── FEATURES GRID ── */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .feature-card {
+            padding: 32px;
+            background: #fff;
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius);
+            transition: all 0.25s;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+            border-color: var(--primary-light);
+        }
+        .feature-icon { font-size: 2.2rem; margin-bottom: 16px; }
+        .feature-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; color: var(--dark); }
+        .feature-card p { color: var(--gray-600); font-size: 0.95rem; }
+
+        /* ── PRICING ── */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .pricing-card {
+            background: #fff;
+            padding: 40px 32px;
+            border-radius: var(--radius);
+            border: 2px solid var(--gray-200);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .pricing-card.featured {
+            border-color: var(--primary);
+            box-shadow: 0 8px 40px rgba(79, 70, 229, 0.15);
+            transform: scale(1.03);
+        }
+        .pricing-card.featured .card-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: #fff;
+            padding: 5px 22px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .pricing-card h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 8px; }
+        .pricing-card .tagline { font-size: 0.9rem; color: var(--gray-500); margin-bottom: 24px; }
+        .price-row { margin-bottom: 24px; }
+        .price-amount { font-size: 2.8rem; font-weight: 900; color: var(--primary); letter-spacing: -0.03em; }
+        .price-note { font-size: 0.85rem; color: var(--gray-500); margin-top: 4px; }
+        .pricing-list { list-style: none; margin-bottom: 32px; flex-grow: 1; }
+        .pricing-list li {
+            padding: 10px 0;
+            padding-left: 28px;
+            position: relative;
+            font-size: 0.95rem;
+            color: var(--gray-700);
+            border-bottom: 1px solid var(--gray-100);
+        }
+        .pricing-list li:last-child { border-bottom: none; }
+        .pricing-list li::before {
+            content: "\2713";
+            position: absolute;
+            left: 0;
+            color: var(--green);
+            font-weight: 700;
+        }
+        .pricing-card .btn { width: 100%; text-align: center; }
+
+        /* ── ADD-ONS ── */
+        .addons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .addon-card {
+            padding: 28px;
+            border-radius: var(--radius);
+            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.04);
+        }
+        .addon-card h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; color: #fff; }
+        .addon-card .addon-price { color: var(--accent); font-weight: 800; font-size: 1.15rem; margin-bottom: 10px; }
+        .addon-card p { color: var(--gray-400); font-size: 0.9rem; }
+
+        /* ── ABOUT ── */
+        .about-inner { max-width: 720px; margin: 0 auto; text-align: center; }
+        .about-inner p { font-size: 1.1rem; color: var(--gray-600); margin-bottom: 20px; }
+        .guarantee-box {
+            margin-top: 36px;
+            padding: 28px;
+            background: #ECFDF5;
+            border: 2px solid var(--green);
+            border-radius: var(--radius);
+            text-align: center;
+        }
+        .guarantee-box strong { color: var(--green); font-size: 1.3rem; display: block; margin-bottom: 8px; }
+        .guarantee-box p { color: var(--gray-700); margin-bottom: 0; }
+
+        /* ── AUDIENCE ── */
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .audience-card {
+            padding: 24px;
+            background: linear-gradient(135deg, rgba(79,70,229,0.06), rgba(147,51,234,0.06));
+            border-radius: var(--radius);
+            text-align: center;
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--gray-700);
+        }
+
+        /* ── PROCESS ── */
+        .process-steps { max-width: 700px; margin: 0 auto; }
+        .step { display: flex; gap: 24px; margin-bottom: 36px; align-items: flex-start; }
+        .step-num {
+            flex-shrink: 0;
+            width: 52px;
+            height: 52px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: 800;
+        }
+        .step-body h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 6px; color: var(--dark); }
+        .step-body p { color: var(--gray-600); font-size: 0.95rem; }
+
+        /* ── FAQ ── */
+        .faq-list { max-width: 760px; margin: 0 auto; }
+        .faq-item { margin-bottom: 16px; background: #fff; border-radius: var(--radius); border: 1px solid var(--gray-200); overflow: hidden; }
+        .faq-question {
+            padding: 22px 28px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            color: var(--dark);
+        }
+        .faq-question::after { content: "+"; font-size: 1.4rem; color: var(--primary); transition: transform 0.2s; }
+        .faq-item.open .faq-question::after { content: "\2212"; }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        .faq-item.open .faq-answer { max-height: 300px; }
+        .faq-answer-inner { padding: 0 28px 22px; color: var(--gray-600); font-size: 0.95rem; line-height: 1.7; }
+
+        /* ── FINAL CTA ── */
+        .final-cta {
+            padding: 100px 24px;
+            background: linear-gradient(135deg, var(--primary) 0%, #7C3AED 50%, #9333EA 100%);
+            color: #fff;
+            text-align: center;
+        }
+        .final-cta h2 { font-size: 2.6rem; font-weight: 900; margin-bottom: 16px; letter-spacing: -0.02em; }
+        .final-cta .sub { font-size: 1.15rem; opacity: 0.9; margin-bottom: 40px; }
+        .contact-grid { display: flex; justify-content: center; gap: 48px; margin-top: 40px; flex-wrap: wrap; }
+        .contact-block { text-align: center; }
+        .contact-block .label { font-size: 0.85rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; margin-bottom: 4px; }
+        .contact-block a { color: #fff; text-decoration: none; font-size: 1.15rem; font-weight: 600; }
+        .contact-block a:hover { text-decoration: underline; }
+
+        /* ── FOOTER ── */
+        footer {
+            padding: 40px 24px;
+            background: var(--dark);
+            text-align: center;
+            color: var(--gray-500);
+            font-size: 0.85rem;
+        }
+        footer a { color: var(--primary-light); text-decoration: none; }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 900px) {
+            .pricing-grid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; }
+            .pricing-card.featured { transform: scale(1); }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--dark);
+                padding: 20px;
+                gap: 16px;
+                border-top: 1px solid rgba(255,255,255,0.05);
+            }
+            .menu-toggle { display: block; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero .subheadline { font-size: 1.05rem; }
+            .section-title { font-size: 1.9rem; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .btn { width: 100%; max-width: 320px; text-align: center; }
+            .trust-bar { gap: 16px; }
+            .contact-grid { flex-direction: column; gap: 24px; }
+            .step { flex-direction: column; gap: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav class="nav">
+    <a href="#" class="brand">Ryan's <span>AI Setup</span></a>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact" class="nav-cta">Book a Free Call</a></li>
+    </ul>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section class="hero">
+    <div class="container">
+        <div class="badge">AI is changing everything. Make sure it's working for you.</div>
+        <h1>Your Own AI Assistant,<br>Installed and Ready to Work</h1>
+        <p class="subheadline">
+            I set up a powerful AI assistant on your computer that connects to your email, calendar, files, and tools.
+            It remembers everything, works around the clock, and gets smarter the more you use it.
+            One-time setup. No monthly fees to me.
+        </p>
+        <div class="hero-buttons">
+            <!-- REPLACE_BOOKING_URL: Create a Cal.com account and paste your booking link here -->
+            <a href="https://cal.com/ryansaisetup/consultation" class="btn btn-primary">Book a Free 15-Min Call</a>
+            <a href="#pricing" class="btn btn-outline">See Pricing</a>
+        </div>
+    </div>
+</section>
+
+<!-- ─── TRUST BAR ─── -->
+<div class="trust-bar">
+    <div class="trust-item"><span class="icon">&#10003;</span> One-Time Fee</div>
+    <div class="trust-item"><span class="icon">&#10003;</span> Your Data Stays Private</div>
+    <div class="trust-item"><span class="icon">&#10003;</span> Money-Back Guarantee</div>
+    <div class="trust-item"><span class="icon">&#10003;</span> In-Person or Remote</div>
+</div>
+
+<!-- ─── PROBLEM ─── -->
+<section class="section section-gray">
+    <div class="container">
+        <h2 class="section-title">You've Tried ChatGPT. It's Not Enough.</h2>
+        <p class="section-sub">Sound familiar?</p>
+        <div class="problems-grid">
+            <div class="problem-card"><span class="x">&#10007;</span><p>It can't access your emails, files, or calendar</p></div>
+            <div class="problem-card"><span class="x">&#10007;</span><p>It forgets everything after each conversation</p></div>
+            <div class="problem-card"><span class="x">&#10007;</span><p>It can't actually do things on your computer</p></div>
+            <div class="problem-card"><span class="x">&#10007;</span><p>You're paying monthly and it still feels limited</p></div>
+            <div class="problem-card"><span class="x">&#10007;</span><p>It can't work while you're away from the keyboard</p></div>
+            <div class="problem-card"><span class="x">&#10007;</span><p>You know AI can do more, but you don't know where to start</p></div>
+        </div>
+        <p class="solution-line">What if your AI could actually take action for you?</p>
+    </div>
+</section>
+
+<!-- ─── WHAT YOU GET ─── -->
+<section class="section" id="services">
+    <div class="container">
+        <h2 class="section-title">What I Set Up For You</h2>
+        <p class="section-sub">Everything is explained in plain English. You don't need to be technical.</p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">&#9881;&#65039;</div>
+                <h3>Full AI Installation</h3>
+                <p>I install and configure a powerful AI assistant directly on your computer. You just talk to it like a person &mdash; it handles the rest.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#128279;</div>
+                <h3>Connected to Your Tools</h3>
+                <p>Email, calendar, files, social media, notes &mdash; all wired up so your AI can read, write, and take action across them.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#129504;</div>
+                <h3>It Remembers Everything</h3>
+                <p>Your AI learns your preferences, past conversations, and how you work. No more repeating yourself every time.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#9889;</div>
+                <h3>Automations That Run For You</h3>
+                <p>Daily email summaries, scheduled tasks, follow-up reminders &mdash; your AI works even when you're not at the keyboard.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#127919;</div>
+                <h3>Built Around Your Workflow</h3>
+                <p>This isn't a one-size-fits-all chatbot. I tailor everything to how you actually work and what you actually need.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#128222;</div>
+                <h3>Ongoing Support</h3>
+                <p>Questions? Need tweaks? I'm a call or text away. You're never left figuring things out alone.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── PRICING ─── -->
+<section class="section section-gray" id="pricing">
+    <div class="container">
+        <h2 class="section-title">Simple, Transparent Pricing</h2>
+        <p class="section-sub">One-time setup fee. No subscriptions to me. No hidden costs.</p>
+        <div class="pricing-grid">
+
+            <!-- TIER 1 -->
+            <div class="pricing-card">
+                <h3>AI Kickstart</h3>
+                <p class="tagline">Perfect if you want to get started fast</p>
+                <div class="price-row">
+                    <div class="price-amount">$750</div>
+                    <p class="price-note">One-time &middot; Setup on your existing computer</p>
+                </div>
+                <ul class="pricing-list">
+                    <li>Full AI assistant installed on your machine</li>
+                    <li>Connected to your email and calendar</li>
+                    <li>File and document access set up</li>
+                    <li>Memory system so it learns your preferences</li>
+                    <li>1-hour hands-on training session</li>
+                    <li>30 days of support</li>
+                </ul>
+                <!-- STRIPE: Replace href with your Stripe Payment Link for $750 -->
+                <a href="https://cal.com/ryansaisetup/consultation" class="btn btn-dark">Get Started</a>
+            </div>
+
+            <!-- TIER 2 -->
+            <div class="pricing-card featured">
+                <div class="card-badge">Most Popular</div>
+                <h3>Full AI Setup</h3>
+                <p class="tagline">For people who want the full power of AI</p>
+                <div class="price-row">
+                    <div class="price-amount">$1,500</div>
+                    <p class="price-note">One-time &middot; Everything, configured perfectly</p>
+                </div>
+                <ul class="pricing-list">
+                    <li>Everything in AI Kickstart</li>
+                    <li>Social media integrations (LinkedIn, Instagram, X)</li>
+                    <li>Custom automations built for your workflow</li>
+                    <li>Multiple AI models (best tool for each task)</li>
+                    <li>2-hour deep-dive training session</li>
+                    <li>60 days of priority support</li>
+                    <li>1 follow-up tune-up session included</li>
+                </ul>
+                <a href="https://cal.com/ryansaisetup/consultation" class="btn btn-primary">Get Started</a>
+            </div>
+
+            <!-- TIER 3 -->
+            <div class="pricing-card">
+                <h3>AI Command Center</h3>
+                <p class="tagline">A dedicated AI machine that never sleeps</p>
+                <div class="price-row">
+                    <div class="price-amount">$2,800</div>
+                    <p class="price-note">One-time &middot; Includes a brand new Mac Mini</p>
+                </div>
+                <ul class="pricing-list">
+                    <li>Everything in Full AI Setup</li>
+                    <li>Brand new Mac Mini, pre-configured and ready</li>
+                    <li>Runs 24/7 without slowing your main computer</li>
+                    <li>Silent, compact, energy-efficient &mdash; just plug in</li>
+                    <li>Advanced automations and scheduled tasks</li>
+                    <li>In-person delivery and installation</li>
+                    <li>90 days of priority support</li>
+                    <li>2 follow-up tune-up sessions</li>
+                </ul>
+                <a href="https://cal.com/ryansaisetup/consultation" class="btn btn-dark">Get Started</a>
+            </div>
+        </div>
+
+        <p style="text-align:center; margin-top:28px; color:var(--gray-500); font-size:0.9rem;">
+            The AI itself uses a small pay-as-you-go fee (typically $10&ndash;$30/month depending on usage), paid directly to the AI provider. I walk you through this during setup.
+        </p>
+    </div>
+</section>
+
+<!-- ─── ADD-ON SERVICES ─── -->
+<section class="section section-dark">
+    <div class="container">
+        <h2 class="section-title">Add-On Services</h2>
+        <p class="section-sub">Already set up? Need something extra? These can be added to any package or purchased standalone.</p>
+        <div class="addons-grid">
+            <div class="addon-card">
+                <h4>AI Chatbot for Your Website</h4>
+                <div class="addon-price">From $750</div>
+                <p>A smart chatbot on your website that answers customer questions 24/7, captures leads, and books appointments &mdash; trained on your business.</p>
+            </div>
+            <div class="addon-card">
+                <h4>Custom Workflow Automation</h4>
+                <div class="addon-price">From $500 / workflow</div>
+                <p>I build automated workflows that handle repetitive tasks for you &mdash; like auto-sorting emails, generating reports, or posting to social media on a schedule.</p>
+            </div>
+            <div class="addon-card">
+                <h4>Team Training Workshop</h4>
+                <div class="addon-price">$500 / session</div>
+                <p>A hands-on session where I teach your team how to use AI tools effectively. Great for getting everyone up to speed fast.</p>
+            </div>
+            <div class="addon-card">
+                <h4>Monthly Support &amp; Updates</h4>
+                <div class="addon-price">From $250 / month</div>
+                <p>Ongoing support, tweaks, and updates. Your AI stays sharp, and you always have someone to call when you need help.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── WHO IT'S FOR ─── -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Who This Is For</h2>
+        <p class="section-sub">If any of these sound like you, we should talk.</p>
+        <div class="audience-grid">
+            <div class="audience-card">Small business owners who want to do more with less</div>
+            <div class="audience-card">Freelancers and consultants buried in admin work</div>
+            <div class="audience-card">Content creators who want to automate the boring stuff</div>
+            <div class="audience-card">Real estate agents, lawyers, and accountants with client-heavy workflows</div>
+            <div class="audience-card">Anyone who knows AI can help but doesn't know where to start</div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── HOW IT WORKS ─── -->
+<section class="section section-gray">
+    <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-sub">From first call to fully operational in as little as a day.</p>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-num">1</div>
+                <div class="step-body">
+                    <h3>Free 15-Minute Call</h3>
+                    <p>We chat about what you do, what eats up your time, and whether an AI assistant makes sense for you. No pressure, no jargon.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <div class="step-body">
+                    <h3>I Handle the Setup</h3>
+                    <p>I install everything on your machine &mdash; in person or over screenshare. You don't need to touch any code or configure anything.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <div class="step-body">
+                    <h3>Your Tools Get Connected</h3>
+                    <p>Email, calendar, files, social media &mdash; I hook up whatever you need so your AI can actually work with your stuff.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">4</div>
+                <div class="step-body">
+                    <h3>I Train You (Not the Other Way Around)</h3>
+                    <p>I walk you through exactly how to use your AI. You'll be surprised how fast it clicks once you see it in action.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">5</div>
+                <div class="step-body">
+                    <h3>Ongoing Support</h3>
+                    <p>Got a question? Need a tweak? I'm a text or call away. You're not on your own after setup.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section class="section" id="about">
+    <div class="container">
+        <div class="about-inner">
+            <h2 class="section-title">Meet Ryan</h2>
+            <!-- TODO: Add a headshot photo here — hugely increases trust -->
+            <p>
+                I've spent years working hands-on with AI tools and building systems that make people's lives easier. I started this business because I kept seeing the same thing: people know AI is powerful, but they don't know how to make it work for <em>them</em>.
+            </p>
+            <p>
+                That's where I come in. I set up, configure, and train AI assistants that run right on your own machine. Everything stays private, everything stays yours. I work with you one-on-one &mdash; locally or remotely &mdash; until it's exactly what you need.
+            </p>
+            <div class="guarantee-box">
+                <strong>My Guarantee</strong>
+                <p>14-day money-back guarantee on AI Kickstart and Full AI Setup. For the AI Command Center, return the Mac Mini in original condition for a full refund. I'm confident because this works &mdash; but you shouldn't have to take my word for it.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── FAQ ─── -->
+<section class="section section-gray" id="faq">
+    <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-sub">No jargon. Just straight answers.</p>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">Do I need to be technical?</div>
+                <div class="faq-answer"><div class="faq-answer-inner">Not at all. I handle everything technical. If you can type a message, you can use your AI assistant. Think of it like texting a very smart coworker.</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What kind of computer do I need?</div>
+                <div class="faq-answer"><div class="faq-answer-inner">Any modern Mac, Windows, or Linux computer works. If you're on Windows, I'll set up everything needed (it's free and built into Windows). I'll make sure your system is ready during our call.</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What if I don't like it?</div>
+                <div class="faq-answer"><div class="faq-answer-inner">You get a 14-day money-back guarantee on the AI Kickstart and Full AI Setup. For the AI Command Center, return the Mac Mini in original condition for a full refund. No questions asked.</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Is my data safe?</div>
+                <div class="faq-answer"><div class="faq-answer-inner">Your AI runs on your own computer. Your files, notes, and documents stay local. When the AI processes a request, only that specific prompt goes to the AI provider &mdash; your files aren't stored on their servers. It's significantly more private than uploading everything to a cloud service.</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What tools can it connect to?</div>
+                <div class="faq-answer"><div class="faq-answer-inner">Email (Gmail, Outlook), Calendar (Google, Outlook), Social Media (LinkedIn, Instagram, X), Files, Notes (Notion), Business Tools (Slack, Stripe), and more. If it has a way to connect, we can probably hook it up.</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Are there any ongoing costs?</div>
+                <div class="faq-answer"><div class="faq-answer-inner">My setup fee is one-time. The AI model itself uses a small pay-as-you-go fee &mdash; typically $10&ndash;$30/month depending on how much you use it, paid directly to the AI provider. I walk you through this during setup so there are no surprises.</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What's the difference between the three packages?</div>
+                <div class="faq-answer"><div class="faq-answer-inner"><strong>AI Kickstart</strong> gets you up and running fast with the essentials. <strong>Full AI Setup</strong> adds social media integrations, custom automations, and more training time &mdash; it's the most popular choice. <strong>AI Command Center</strong> includes a dedicated Mac Mini that runs your AI 24/7 without touching your main computer &mdash; you just plug it in.</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Can we do this in person?</div>
+                <div class="faq-answer"><div class="faq-answer-inner">Yes! I offer in-person setup for local clients. We can also do everything remotely over screenshare if that's easier for you.</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How do I pay?</div>
+                <div class="faq-answer"><div class="faq-answer-inner">I accept Venmo, CashApp, and card payments. Payment is due at the start of the setup session, after our free consultation. No payment required for the initial call.</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── FINAL CTA ─── -->
+<section class="final-cta" id="contact">
+    <div class="container">
+        <h2>Ready to Put AI to Work for You?</h2>
+        <p class="sub">Book a free 15-minute call. No pressure. Let's figure out if this is right for you.</p>
+        <a href="https://cal.com/ryansaisetup/consultation" class="btn btn-primary" style="font-size:1.15rem; padding:18px 44px;">Book a Free Call</a>
+        <div class="contact-grid">
+            <div class="contact-block">
+                <div class="label">Email</div>
+                <a href="mailto:ryansaisetup@gmail.com">ryansaisetup@gmail.com</a>
+            </div>
+            <div class="contact-block">
+                <div class="label">Call / Text</div>
+                <a href="tel:+19295015423">(929) 501-5423</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+    <p><strong>Ryan's AI Setup</strong> &mdash; AI Consulting &amp; Installation</p>
+    <p style="margin-top:8px;">Helping real people get real results with AI.</p>
+    <p style="margin-top:16px;">&copy; 2026 Ryan's AI Setup. All rights reserved.</p>
+</footer>
+
+<!-- ─── FAQ TOGGLE SCRIPT ─── -->
+<script>
+document.querySelectorAll('.faq-question').forEach(function(q) {
+    q.addEventListener('click', function() {
+        this.parentElement.classList.toggle('open');
+    });
+});
+</script>
+</body>
+</html>
