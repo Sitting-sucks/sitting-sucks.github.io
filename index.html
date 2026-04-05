@@ -201,7 +201,19 @@
 
 <!-- NAV -->
 <nav class="nav">
-    <a href="#" class="brand">Ryan's <span>AI Setup</span></a>
+    <a href="#" class="brand" style="display:flex; align-items:center; gap:10px;">
+        <svg width="36" height="36" viewBox="-70 -70 140 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="0" cy="0" r="58" fill="none" stroke="#818CF8" stroke-width="1.5"/>
+            <circle cx="0" cy="0" r="44" fill="none" stroke="#A78BFA" stroke-width="1" opacity="0.6"/>
+            <circle cx="0" cy="0" r="30" fill="#818CF8"/>
+            <text x="0" y="12" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700" font-size="36" fill="white">R</text>
+            <circle cx="0" cy="-58" r="4" fill="#818CF8"/><circle cx="58" cy="0" r="4" fill="#818CF8"/>
+            <circle cx="0" cy="58" r="4" fill="#818CF8"/><circle cx="-58" cy="0" r="4" fill="#818CF8"/>
+            <circle cx="41" cy="-41" r="3" fill="#A78BFA"/><circle cx="41" cy="41" r="3" fill="#A78BFA"/>
+            <circle cx="-41" cy="-41" r="3" fill="#A78BFA"/><circle cx="-41" cy="41" r="3" fill="#A78BFA"/>
+        </svg>
+        Ryan's <span>AI Setup</span>
+    </a>
     <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">&#9776;</button>
     <ul class="nav-links">
         <li><a href="#services">Services</a></li>

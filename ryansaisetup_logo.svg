@@ -1,0 +1,52 @@
+<svg width="680" height="320" viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>
+.logo-ring { fill: none; stroke: #6C8EF5; stroke-width: 1.5; }
+.logo-ring-2 { fill: none; stroke: #A78BFA; stroke-width: 1; opacity: 0.6; }
+.logo-dot { fill: #6C8EF5; }
+.logo-dot-2 { fill: #A78BFA; }
+.logo-name { font-family: system-ui, sans-serif; font-weight: 500; font-size: 38px; fill: #1a1a2e; letter-spacing: -1px; }
+.logo-name-bold { font-family: system-ui, sans-serif; font-weight: 700; font-size: 38px; fill: #6C8EF5; letter-spacing: -1px; }
+.logo-sub { font-family: system-ui, sans-serif; font-weight: 400; font-size: 13px; fill: #6C8EF5; letter-spacing: 3.5px; }
+.logo-r { font-family: system-ui, sans-serif; font-weight: 700; font-size: 36px; fill: white; }
+.node-line { stroke: #6C8EF5; stroke-width: 1; opacity: 0.5; }
+</style>
+</defs>
+
+<!-- White background for standalone use -->
+<rect width="680" height="320" fill="white"/>
+
+<g transform="translate(170, 160)">
+  <circle cx="0" cy="0" r="58" class="logo-ring"/>
+  <circle cx="0" cy="0" r="44" class="logo-ring-2"/>
+  <circle cx="0" cy="0" r="30" fill="#6C8EF5"/>
+  <text x="0" y="13" text-anchor="middle" class="logo-r">R</text>
+
+  <circle cx="0" cy="-58" r="4" class="logo-dot"/>
+  <circle cx="58" cy="0" r="4" class="logo-dot"/>
+  <circle cx="0" cy="58" r="4" class="logo-dot"/>
+  <circle cx="-58" cy="0" r="4" class="logo-dot"/>
+  <circle cx="41" cy="-41" r="3" class="logo-dot-2"/>
+  <circle cx="41" cy="41" r="3" class="logo-dot-2"/>
+  <circle cx="-41" cy="-41" r="3" class="logo-dot-2"/>
+  <circle cx="-41" cy="41" r="3" class="logo-dot-2"/>
+
+  <line x1="0" y1="-44" x2="0" y2="-54" class="node-line"/>
+  <line x1="44" y1="0" x2="54" y2="0" class="node-line"/>
+  <line x1="0" y1="44" x2="0" y2="54" class="node-line"/>
+  <line x1="-44" y1="0" x2="-54" y2="0" class="node-line"/>
+  <line x1="0" y1="-62" x2="0" y2="-68" class="node-line" opacity="0.4"/>
+  <line x1="62" y1="0" x2="68" y2="0" class="node-line" opacity="0.4"/>
+  <line x1="0" y1="62" x2="0" y2="68" class="node-line" opacity="0.4"/>
+  <line x1="-62" y1="0" x2="-68" y2="0" class="node-line" opacity="0.4"/>
+</g>
+
+<text x="260" y="138">
+  <tspan class="logo-name-bold">Ryan</tspan><tspan class="logo-name">'s AI Setup</tspan>
+</text>
+
+<line x1="260" y1="152" x2="555" y2="152" stroke="#6C8EF5" stroke-width="0.75" opacity="0.4"/>
+
+<text x="261" y="172" class="logo-sub">PUTTING AI TO WORK, FOR YOU</text>
+
+</svg>
