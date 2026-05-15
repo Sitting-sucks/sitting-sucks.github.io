@@ -17,14 +17,17 @@
     <link rel="canonical" href="https://ryansaisetup.com/guide.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #4F46E5;
             --primary-dark: #3730A3;
             --primary-light: #818CF8;
+            --primary-deep: #1e1b4b;
+            --primary-mid: #312e81;
             --accent: #F59E0B;
             --accent-hover: #D97706;
+            --accent-light: #fbbf24;
             --dark: #111827;
             --gray-50: #F9FAFB;
             --gray-100: #F3F4F6;
@@ -46,20 +49,22 @@
         .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
         /* NAV */
-        .nav { background: var(--dark); padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .nav { background: linear-gradient(135deg, #0f0e1a, #111827); padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(99,102,241,0.2); }
         .nav .brand { color: #fff; font-size: 1.2rem; font-weight: 800; text-decoration: none; letter-spacing: -0.02em; display: flex; align-items: center; gap: 10px; }
         .nav .brand span { color: var(--primary-light); }
         .nav-back { color: var(--gray-400); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; display: flex; align-items: center; gap: 6px; }
         .nav-back:hover { color: #fff; }
 
         /* HERO */
-        .guide-hero { background: linear-gradient(135deg, var(--primary) 0%, #7C3AED 50%, #9333EA 100%); color: #fff; padding: 80px 24px; position: relative; overflow: hidden; }
-        .guide-hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.06) 0%, transparent 50%); }
+        .guide-hero { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 30%, #4F46E5 65%, #6366f1 100%); color: #fff; padding: 80px 24px; position: relative; overflow: hidden; }
+        .guide-hero::before { content: ''; position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; background: rgba(99,102,241,0.25); border-radius: 50%; pointer-events: none; }
+        .guide-hero::after { content: ''; position: absolute; bottom: -100px; left: -60px; width: 350px; height: 350px; background: rgba(245,158,11,0.15); border-radius: 50%; pointer-events: none; }
         .guide-hero .container { position: relative; z-index: 1; display: flex; align-items: center; gap: 64px; flex-wrap: wrap; justify-content: center; }
         .guide-hero-text { flex: 1; min-width: 280px; max-width: 580px; }
-        .guide-hero-text .badge { display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); padding: 7px 22px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 24px; letter-spacing: 0.01em; }
-        .guide-hero-text h1 { font-size: 3rem; font-weight: 900; line-height: 1.15; margin-bottom: 20px; letter-spacing: -0.03em; }
-        .guide-hero-text h1 span { color: var(--accent); }
+        .guide-hero-text .badge { display: inline-block; background: rgba(245,158,11,0.9); border: 1px solid rgba(245,158,11,0.4); color: #111827; padding: 7px 22px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 24px; letter-spacing: 0.01em; }
+        .guide-hero-text h1 { font-size: 3rem; font-weight: 900; line-height: 1.15; margin-bottom: 12px; letter-spacing: -0.03em; text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+        .hero-divider { width: 80px; height: 3px; background: linear-gradient(90deg, #F59E0B, #fbbf24); border-radius: 2px; margin: 0 0 20px; }
+        .guide-hero-text h1 span { color: var(--accent-light); }
         .guide-hero-text .sub { font-size: 1.15rem; opacity: 0.92; margin-bottom: 36px; font-weight: 400; }
         .price-display { display: flex; align-items: baseline; gap: 12px; margin-bottom: 28px; }
         .price-big { font-size: 3.2rem; font-weight: 900; color: var(--accent); letter-spacing: -0.04em; }
@@ -76,12 +81,14 @@
         .book-cover .book-author { position: absolute; bottom: 16px; font-size: 0.75rem; opacity: 0.7; font-weight: 500; }
 
         /* BUTTONS */
-        .btn { display: inline-block; padding: 16px 36px; font-size: 1.05rem; font-weight: 700; text-decoration: none; border-radius: 10px; transition: all 0.2s; cursor: pointer; border: none; font-family: inherit; }
-        .btn-primary { background: var(--accent); color: var(--dark); box-shadow: 0 4px 14px rgba(245,158,11,0.4); }
+        .btn { display: inline-block; padding: 16px 36px; font-size: 1.05rem; font-weight: 700; text-decoration: none; border-radius: 12px; transition: all 0.2s; cursor: pointer; border: none; font-family: inherit; position: relative; overflow: hidden; }
+        .btn-primary { background: var(--accent); color: var(--dark); box-shadow: 0 4px 14px rgba(245,158,11,0.4); letter-spacing: 0.02em; text-transform: uppercase; font-size: 0.9rem; }
+        .btn-primary::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s; }
         .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(245,158,11,0.5); }
-        .btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.4); }
+        .btn-primary:hover::after { left: 100%; }
+        .btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.4); border-radius: 12px; }
         .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.6); }
-        .btn-green { background: var(--green); color: #fff; box-shadow: 0 4px 14px rgba(16,185,129,0.35); }
+        .btn-green { background: var(--green); color: #fff; box-shadow: 0 4px 14px rgba(16,185,129,0.35); border-radius: 12px; }
         .btn-green:hover { background: #059669; transform: translateY(-2px); }
         .btn-lg { padding: 18px 44px; font-size: 1.15rem; }
 
@@ -89,13 +96,15 @@
         .section { padding: 80px 24px; }
         .section-gray { background: var(--gray-50); }
         .section-dark { background: var(--dark); color: #fff; }
-        .section-title { font-size: 2.2rem; font-weight: 800; text-align: center; margin-bottom: 14px; letter-spacing: -0.02em; }
+        .section-title { font-size: 2.6rem; font-weight: 900; text-align: center; margin-bottom: 12px; letter-spacing: -0.03em; }
+        .section-title span { background: linear-gradient(135deg, #4F46E5, #6366f1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .section-divider { width: 60px; height: 3px; background: linear-gradient(90deg, #F59E0B, #fbbf24); border-radius: 2px; margin: 12px auto 40px; }
         .section-sub { text-align: center; font-size: 1.05rem; color: var(--gray-500); margin-bottom: 48px; max-width: 600px; margin-left: auto; margin-right: auto; }
 
         /* WHAT'S INSIDE */
         .inside-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 960px; margin: 0 auto; }
-        .inside-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 28px 24px; display: flex; gap: 16px; align-items: flex-start; transition: all 0.25s; }
-        .inside-card:hover { border-color: var(--primary-light); box-shadow: 0 8px 30px rgba(79,70,229,0.1); transform: translateY(-2px); }
+        .inside-card { background: #fff; border: 1px solid var(--gray-200); border-top: 3px solid var(--primary); border-radius: var(--radius); padding: 28px 24px; display: flex; gap: 16px; align-items: flex-start; transition: all 0.25s; }
+        .inside-card:hover { border-color: var(--primary-light); box-shadow: 0 20px 60px rgba(79,70,229,0.15); transform: translateY(-2px); }
         .inside-icon { font-size: 1.8rem; flex-shrink: 0; margin-top: 2px; }
         .inside-card h4 { font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 6px; }
         .inside-card p { font-size: 0.88rem; color: var(--gray-600); line-height: 1.6; }
@@ -136,7 +145,7 @@
             .guide-hero-text h1 { font-size: 2.2rem; }
             .guide-hero .container { flex-direction: column-reverse; gap: 40px; }
             .book-mockup { width: auto; }
-            .section-title { font-size: 1.8rem; }
+            .section-title { font-size: 2rem; }
             .buy-box { padding: 32px 24px; }
         }
     </style>
@@ -165,6 +174,7 @@
         <div class="guide-hero-text">
             <div class="badge">📖 Instant Digital Download</div>
             <h1>The Complete<br><span>Claude Guide</span></h1>
+            <div class="hero-divider"></div>
             <p class="sub">Everything you need to get the most out of Claude — from total beginner to power user. Written in plain English with zero tech jargon.</p>
             <div class="price-display">
                 <span class="price-big">$29</span>
@@ -188,6 +198,7 @@
 <section class="section" id="inside">
     <div class="container">
         <h2 class="section-title">What's Inside</h2>
+        <div class="section-divider"></div>
         <p class="section-sub">A practical, no-fluff walkthrough of everything Claude can do for your business — explained step by step.</p>
         <div class="inside-grid">
 
@@ -247,6 +258,7 @@
 <section class="section section-gray" id="who">
     <div class="container">
         <h2 class="section-title">Who This Is For</h2>
+        <div class="section-divider"></div>
         <p class="section-sub">You don't need any technical background. If you can type a message, you can follow this guide.</p>
         <div class="for-grid">
             <div class="for-card"><span class="ic">💼</span> Small business owners</div>
@@ -281,6 +293,7 @@
 <section class="section" id="faq">
     <div class="container">
         <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="section-divider"></div>
         <p class="section-sub">Quick answers about the guide.</p>
         <div class="faq-list">
 
@@ -315,8 +328,10 @@
 </section>
 
 <!-- FINAL CTA -->
-<section style="background: linear-gradient(135deg, var(--primary) 0%, #7C3AED 50%, #9333EA 100%); padding: 80px 24px; text-align: center; color: #fff;">
-    <div class="container" style="max-width: 640px;">
+<section style="background: linear-gradient(135deg, #1e1b4b 0%, #312e81 30%, #4F46E5 65%, #6366f1 100%); padding: 80px 24px; text-align: center; color: #fff; position: relative; overflow: hidden;">
+    <div style="position:absolute; top:-80px; right:-80px; width:400px; height:400px; background:rgba(99,102,241,0.25); border-radius:50%; pointer-events:none;"></div>
+    <div style="position:absolute; bottom:-100px; left:-60px; width:350px; height:350px; background:rgba(245,158,11,0.15); border-radius:50%; pointer-events:none;"></div>
+    <div class="container" style="max-width: 640px; position:relative; z-index:1;">
         <h2 style="font-size:2.4rem; font-weight:900; margin-bottom:16px; letter-spacing:-0.02em;">Get the Guide Today for $29</h2>
         <p style="font-size:1.1rem; opacity:0.9; margin-bottom:36px;">Stop guessing with Claude. Start doing more in less time, starting today.</p>
         <a href="https://buy.stripe.com/5kQcMXgHO3rB4Ci1BKgQE07" class="btn btn-primary btn-lg">Buy Now — Instant Download</a>
