@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products & Tools | Ryan's AI Setup</title>
+    <meta name="description" content="Digital products and tools built by Ryan's AI Setup — skills packs, guides, and AI tools for your business.">
+    <meta property="og:title" content="Products & Tools | Ryan's AI Setup">
+    <meta property="og:description" content="Digital tools, skills packs, and AI products built by Ryan and his AI team.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ryansaisetup.com/og-image.png">
+    <meta property="og:url" content="https://ryansaisetup.com/products.html">
+    <link rel="canonical" href="https://ryansaisetup.com/products.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4F46E5;
+            --primary-dark: #3730A3;
+            --primary-light: #818CF8;
+            --primary-deep: #1e1b4b;
+            --primary-mid: #312e81;
+            --accent: #F59E0B;
+            --accent-hover: #D97706;
+            --accent-light: #fbbf24;
+            --dark: #111827;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-400: #9CA3AF;
+            --gray-500: #6B7280;
+            --gray-600: #4B5563;
+            --gray-700: #374151;
+            --green: #10B981;
+            --radius: 12px;
+        }
+        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7; color: var(--dark); background: #fff;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* NAV (same as main site) */
+        .nav { background: linear-gradient(135deg, #0f0e1a, #111827); padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(99,102,241,0.2); }
+        .nav .brand { color: #fff; font-size: 1.2rem; font-weight: 800; text-decoration: none; letter-spacing: -0.02em; display: flex; align-items: center; gap: 10px; }
+        .nav .brand span { color: var(--primary-light); }
+        .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+        .nav-links a { color: var(--gray-400); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
+        .nav-links a:hover { color: #fff; }
+        .nav-links .nav-cta { background: var(--accent); color: var(--dark) !important; padding: 8px 20px; border-radius: 8px; font-weight: 700; font-size: 0.85rem; transition: background 0.2s; }
+        .nav-links .nav-cta:hover { background: var(--accent-hover); }
+        .menu-toggle { display: none; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; }
+        .nav-links a.active { color: #fff; font-weight: 600; }
+
+        /* HERO */
+        .hero { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 30%, #4F46E5 65%, #6366f1 100%); color: #fff; padding: 80px 24px 70px; text-align: center; position: relative; overflow: hidden; }
+        .hero h1 { font-size: 2.8rem; font-weight: 900; line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.03em; }
+        .hero-divider { width: 60px; height: 3px; background: linear-gradient(90deg, #F59E0B, #fbbf24); border-radius: 2px; margin: 0 auto 20px; }
+        .hero .sub { font-size: 1.15rem; opacity: 0.92; max-width: 620px; margin: 0 auto; font-weight: 400; }
+
+        /* SECTION */
+        .section { padding: 80px 24px; }
+        .section-gray { background: var(--gray-50); }
+        .section-dark { background: var(--dark); color: #fff; }
+        .section-title { font-size: 2.2rem; font-weight: 900; text-align: center; margin-bottom: 12px; letter-spacing: -0.03em; }
+        .section-title span { background: linear-gradient(135deg, #4F46E5, #6366f1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .section-divider { width: 60px; height: 3px; background: linear-gradient(90deg, #F59E0B, #fbbf24); border-radius: 2px; margin: 12px auto 40px; }
+        .section-sub { text-align: center; font-size: 1.05rem; color: var(--gray-500); margin-bottom: 48px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .section-dark .section-sub { color: var(--gray-400); }
+
+        /* PRODUCT GRID */
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; max-width: 1050px; margin: 0 auto; }
+        .product-card { background: #fff; border: 2px solid var(--gray-200); border-radius: var(--radius); padding: 36px 28px; display: flex; flex-direction: column; transition: all 0.25s; position: relative; }
+        .product-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(79,70,229,0.12); border-color: var(--primary-light); }
+        .product-card.featured { border-color: var(--primary); box-shadow: 0 8px 32px rgba(79,70,229,0.15); background: linear-gradient(135deg, #ffffff, #f8f7ff); }
+        .product-card.featured .badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: var(--dark); padding: 4px 18px; border-radius: 50px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+        .product-icon { font-size: 2.4rem; margin-bottom: 12px; }
+        .product-card h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 6px; }
+        .product-card .tagline { font-size: 0.9rem; color: var(--gray-500); margin-bottom: 16px; }
+        .product-card .description { font-size: 0.92rem; color: var(--gray-600); margin-bottom: 20px; flex-grow: 1; line-height: 1.6; }
+        .product-card .features { list-style: none; margin-bottom: 24px; }
+        .product-card .features li { padding: 5px 0; padding-left: 22px; position: relative; font-size: 0.88rem; color: var(--gray-700); }
+        .product-card .features li::before { content: "\2713"; position: absolute; left: 0; color: var(--green); font-weight: 700; }
+        .product-price { font-size: 2rem; font-weight: 900; color: var(--primary); margin-bottom: 4px; }
+        .product-price-note { font-size: 0.82rem; color: var(--gray-500); margin-bottom: 20px; }
+        .product-card .btn { display: inline-block; padding: 14px 28px; font-size: 0.92rem; font-weight: 700; text-decoration: none; border-radius: 10px; transition: all 0.2s; cursor: pointer; border: none; font-family: inherit; text-align: center; }
+        .btn-primary { background: var(--accent); color: var(--dark); box-shadow: 0 4px 14px rgba(245,158,11,0.3); }
+        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); }
+        .btn-outline { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: #fff; }
+        .btn-dark { background: var(--primary); color: #fff; }
+        .btn-dark:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .btn-green { background: var(--green); color: #fff; }
+        .btn-green:hover { background: #059669; transform: translateY(-2px); }
+
+        /* BUILT BY SECTION */
+        .built-by { text-align: center; max-width: 650px; margin: 56px auto 0; padding: 32px; border-radius: var(--radius); background: linear-gradient(135deg, rgba(79,70,229,0.06), rgba(147,51,234,0.06)); border: 1px solid var(--gray-200); }
+        .built-by h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+        .built-by p { font-size: 0.92rem; color: var(--gray-600); }
+        .built-by .tag { display: inline-block; margin-top: 14px; padding: 5px 14px; background: var(--accent); color: var(--dark); border-radius: 50px; font-size: 0.78rem; font-weight: 700; }
+
+        /* COMING SOON */
+        .coming-soon-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; max-width: 900px; margin: 0 auto; }
+        .coming-card { padding: 24px; border-radius: var(--radius); border: 1px dashed rgba(99,102,241,0.3); background: rgba(255,255,255,0.04); text-align: center; }
+        .coming-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; color: #fff; }
+        .coming-card p { color: var(--gray-400); font-size: 0.85rem; }
+        .coming-badge { display: inline-block; margin-top: 10px; padding: 3px 12px; background: rgba(245,158,11,0.15); color: var(--accent); border-radius: 50px; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+
+        /* FOOTER */
+        footer { padding: 40px 24px; background: var(--dark); text-align: center; color: var(--gray-500); font-size: 0.85rem; }
+        footer a { color: var(--primary-light); text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); padding: 20px; gap: 16px; border-top: 1px solid rgba(255,255,255,0.05); }
+            .menu-toggle { display: block; }
+            .hero h1 { font-size: 2rem; }
+            .section-title { font-size: 1.7rem; }
+            .products-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+    <a href="/" class="brand">
+        <svg width="32" height="32" viewBox="-70 -70 140 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="0" cy="0" r="58" fill="none" stroke="#818CF8" stroke-width="1.5"/>
+            <circle cx="0" cy="0" r="44" fill="none" stroke="#A78BFA" stroke-width="1" opacity="0.6"/>
+            <circle cx="0" cy="0" r="30" fill="#818CF8"/>
+            <text x="0" y="12" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700" font-size="36" fill="white">R</text>
+        </svg>
+        Ryan's <span>AI Setup</span>
+    </a>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/products.html" class="active">Products</a></li>
+        <li><a href="/guide.html">Guide</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="#newsletter">Updates</a></li>
+        <li><a href="https://cal.com/ryansaisetup/consultation" class="nav-cta">Book a Free Call</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <h1>Products &amp; Tools</h1>
+        <div class="hero-divider"></div>
+        <p class="sub">Digital tools, skills, and guides built by Ryan and his AI team. Buy once, use forever.</p>
+    </div>
+</section>
+
+<!-- PRODUCTS GRID -->
+<section class="section" id="products">
+    <div class="container">
+        <h2 class="section-title"><span>Available Now</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-sub">Ready to download. Ready to use.</p>
+
+        <div class="products-grid">
+
+            <!-- The Complete Claude Guide -->
+            <div class="product-card featured">
+                <div class="badge">Best Seller</div>
+                <div class="product-icon">📘</div>
+                <h3>The Complete Claude Guide</h3>
+                <p class="tagline">Master Claude AI — no tech background required</p>
+                <p class="description">Everything you need to get the most out of Claude. Every command, every trick, every workflow — in plain English. 80+ pages of actionable content.</p>
+                <ul class="features">
+                    <li>All slash commands explained with real examples</li>
+                    <li>How to deploy agents that work for you</li>
+                    <li>When to use Cowork vs Claude Code vs Chat</li>
+                    <li>Connect your email, calendar, and files</li>
+                    <li>Ready-to-use prompts for common tasks</li>
+                </ul>
+                <div class="product-price">$29</div>
+                <div class="product-price-note">Instant PDF download. Read on any device.</div>
+                <a href="https://buy.stripe.com/5kQcMXgHO3rB4Ci1BKgQE07" class="btn btn-primary">Buy Now — $29</a>
+            </div>
+
+            <!-- Claude AI Setup (link to main service) -->
+            <div class="product-card">
+                <div class="product-icon">⚡</div>
+                <h3>Claude AI Setup Service</h3>
+                <p class="tagline">I install and configure Claude on your computer</p>
+                <p class="description">Personal AI assistant installed on your Mac or PC. Claude Code, Desktop App, personalized memory, and a 45-minute training session. You'll be up and running today.</p>
+                <ul class="features">
+                    <li>Claude Code &amp; Desktop App installed</li>
+                    <li>Personalized AI memory setup</li>
+                    <li>45-minute training walkthrough</li>
+                    <li>Includes The Complete Claude Guide ($29 value)</li>
+                    <li>14-day email support</li>
+                </ul>
+                <div class="product-price">$399</div>
+                <div class="product-price-note">One-time fee + Claude Pro subscription (~$20/mo)</div>
+                <a href="https://buy.stripe.com/28EdR177e2nx5Gm1BKgQE04" class="btn btn-outline">Buy Setup — $399</a>
+            </div>
+
+            <!-- Referral -->
+            <div class="product-card" style="background: linear-gradient(135deg, #fefce8, #fffbeb); border-color: #fde68a;">
+                <div class="product-icon">💰</div>
+                <h3>Referral Reward</h3>
+                <p class="tagline">Know someone who needs AI? You get paid.</p>
+                <p class="description">Refer a friend, colleague, or business owner to any service. When they sign up and pay, I send you $100. No limit. No catch. Just have them mention your name when they book.</p>
+                <ul class="features">
+                    <li>$100 per referral, unlimited</li>
+                    <li>Works for any service on the site</li>
+                    <li>No expiration — you keep earning</li>
+                    <li>Just have them mention your name</li>
+                </ul>
+                <div class="product-price">$100</div>
+                <div class="product-price-note">Per referral, paid after their first payment</div>
+                <a href="https://cal.com/ryansaisetup/consultation" class="btn btn-dark">Send Someone →</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- COMING SOON -->
+<section class="section section-dark" id="coming-soon">
+    <div class="container">
+        <h2 class="section-title">Coming Soon</h2>
+        <div class="section-divider"></div>
+        <p class="section-sub">Stuff we're building right now. Join the waitlist to know when they launch.</p>
+        <div class="coming-soon-grid">
+            <div class="coming-card">
+                <h4>AI Skills Packs</h4>
+                <p>Curated Claude Code skill packs for specific professions — real estate, legal, healthcare, fitness coaching, and more.</p>
+                <span class="coming-badge">Building Now</span>
+            </div>
+            <div class="coming-card">
+                <h4>Custom AI Workflow Templates</h4>
+                <p>Pre-built n8n automation templates for common business workflows — lead capture, follow-ups, invoicing, reporting.</p>
+                <span class="coming-badge">In Development</span>
+            </div>
+            <div class="coming-card">
+                <h4>The Ryan Stack</h4>
+                <p>Our complete AI tool stack as a deployable package — Hermes Agent, skills, automations, and config — fully set up for your business.</p>
+                <span class="coming-badge">Planned</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="section" id="newsletter">
+    <div class="container" style="text-align:center; max-width: 580px;">
+        <h2 style="font-size:1.8rem; font-weight:800; margin-bottom:10px;">Get Product Updates</h2>
+        <p style="font-size:1.05rem; color:var(--gray-500); margin-bottom:28px;">Be the first to know when new tools and products launch.</p>
+        <p style="font-size:0.9rem; color:var(--gray-400); margin-bottom:8px;">No spam. Unsubscribe anytime. New products every month.</p>
+        <p style="font-size:0.82rem; color:var(--gray-400);">For now, send an email to <a href="mailto:ryansaisetup@gmail.com?subject=Product%20Updates" style="color:var(--primary-light);">ryansaisetup@gmail.com</a> with subject "Product Updates" to join the list.</p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2026 Ryan's AI Setup. Built by Ryan + an AI teammate who never sleeps.</p>
+    <p style="margin-top:6px;"><a href="/">Home</a> · <a href="/products.html">Products</a> · <a href="/guide.html">Guide</a> · <a href="https://cal.com/ryansaisetup/consultation">Book a Call</a></p>
+</footer>
+
+</body>
+</html>
