@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hermes Stack | Your Complete AI Teammate — $1,497 | Ryan's AI Setup</title>
+    <meta name="description" content="The Hermes Stack installs your complete AI teammate in about 10 minutes — agent, persistent memory, code intelligence, workflow automation, and 20+ skills. One command. One-time $1,497. Lifetime updates.">
+    <meta property="og:title" content="The Hermes Stack — Your Complete AI Teammate">
+    <meta property="og:description" content="One command installs the whole stack: agent, memory, code intelligence, automation, 20+ skills. Self-serve, 10-minute setup, lifetime updates. $1,497 one-time.">
+    <meta property="og:type" content="product">
+    <meta property="og:image" content="https://ryansaisetup.com/og-image.png">
+    <meta property="og:url" content="https://ryansaisetup.com/hermes-stack.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Hermes Stack — $1,497">
+    <meta name="twitter:description" content="Your complete AI teammate, installed in 10 minutes. Self-serve, one-time, lifetime updates.">
+    <meta name="twitter:image" content="https://ryansaisetup.com/og-image.png">
+    <link rel="canonical" href="https://ryansaisetup.com/hermes-stack.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4F46E5;
+            --primary-dark: #3730A3;
+            --primary-light: #818CF8;
+            --primary-deep: #1e1b4b;
+            --primary-mid: #312e81;
+            --accent: #F59E0B;
+            --accent-hover: #D97706;
+            --accent-light: #fbbf24;
+            --dark: #111827;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-400: #9CA3AF;
+            --gray-500: #6B7280;
+            --gray-600: #4B5563;
+            --gray-700: #374151;
+            --green: #10B981;
+            --radius: 12px;
+        }
+        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7; color: var(--dark); background: #fff;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* NAV */
+        .nav { background: linear-gradient(135deg, #0f0e1a, #111827); padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(99,102,241,0.2); }
+        .nav .brand { color: #fff; font-size: 1.2rem; font-weight: 800; text-decoration: none; letter-spacing: -0.02em; display: flex; align-items: center; gap: 10px; }
+        .nav .brand span { color: var(--primary-light); }
+        .nav-back { color: var(--gray-400); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; display: flex; align-items: center; gap: 6px; }
+        .nav-back:hover { color: #fff; }
+
+        /* HERO */
+        .guide-hero { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 30%, #4F46E5 65%, #6366f1 100%); color: #fff; padding: 80px 24px; position: relative; overflow: hidden; }
+        .guide-hero::before { content: ''; position: absolute; top: -80px; right: -80px; width: 400px; height: 400px; background: rgba(99,102,241,0.25); border-radius: 50%; pointer-events: none; }
+        .guide-hero::after { content: ''; position: absolute; bottom: -100px; left: -60px; width: 350px; height: 350px; background: rgba(245,158,11,0.15); border-radius: 50%; pointer-events: none; }
+        .guide-hero .container { position: relative; z-index: 1; display: flex; align-items: center; gap: 64px; flex-wrap: wrap; justify-content: center; }
+        .guide-hero-text { flex: 1; min-width: 280px; max-width: 580px; }
+        .guide-hero-text .badge { display: inline-block; background: rgba(245,158,11,0.9); border: 1px solid rgba(245,158,11,0.4); color: #111827; padding: 7px 22px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 24px; letter-spacing: 0.01em; }
+        .guide-hero-text h1 { font-size: 3rem; font-weight: 900; line-height: 1.15; margin-bottom: 12px; letter-spacing: -0.03em; text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+        .hero-divider { width: 80px; height: 3px; background: linear-gradient(90deg, #F59E0B, #fbbf24); border-radius: 2px; margin: 0 0 20px; }
+        .guide-hero-text h1 span { color: var(--accent-light); }
+        .guide-hero-text .sub { font-size: 1.15rem; opacity: 0.92; margin-bottom: 36px; font-weight: 400; }
+        .price-display { display: flex; align-items: baseline; gap: 12px; margin-bottom: 28px; }
+        .price-big { font-size: 3.2rem; font-weight: 900; color: var(--accent); letter-spacing: -0.04em; }
+        .price-label { font-size: 1rem; opacity: 0.75; }
+
+        /* TERMINAL MOCKUP */
+        .term-mock { flex-shrink: 0; width: 380px; max-width: 100%; }
+        .term-window { background: #0b1020; border-radius: 12px; box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(99,102,241,0.25); overflow: hidden; font-family: 'SF Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace; }
+        .term-bar { background: #161c2e; padding: 11px 14px; display: flex; align-items: center; gap: 7px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+        .term-dot { width: 11px; height: 11px; border-radius: 50%; }
+        .term-dot.r { background: #ff5f56; } .term-dot.y { background: #ffbd2e; } .term-dot.g { background: #27c93f; }
+        .term-title { color: var(--gray-400); font-size: 0.78rem; margin-left: 8px; }
+        .term-body { padding: 20px 18px; font-size: 0.86rem; line-height: 1.85; }
+        .term-body .cmd { color: #e5e7eb; } .term-body .cmd .p { color: #818CF8; }
+        .term-body .ok { color: #34d399; } .term-body .dim { color: var(--gray-500); }
+
+        /* BUTTONS */
+        .btn { display: inline-block; padding: 16px 36px; font-size: 1.05rem; font-weight: 700; text-decoration: none; border-radius: 12px; transition: all 0.2s; cursor: pointer; border: none; font-family: inherit; position: relative; overflow: hidden; }
+        .btn-primary { background: var(--accent); color: var(--dark); box-shadow: 0 4px 14px rgba(245,158,11,0.4); letter-spacing: 0.02em; text-transform: uppercase; font-size: 0.9rem; }
+        .btn-primary::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s; }
+        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(245,158,11,0.5); }
+        .btn-primary:hover::after { left: 100%; }
+        .btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.4); border-radius: 12px; }
+        .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.6); }
+        .btn-lg { padding: 18px 44px; font-size: 1.15rem; }
+
+        /* SECTIONS */
+        .section { padding: 80px 24px; }
+        .section-gray { background: var(--gray-50); }
+        .section-dark { background: var(--dark); color: #fff; }
+        .section-title { font-size: 2.6rem; font-weight: 900; text-align: center; margin-bottom: 12px; letter-spacing: -0.03em; }
+        .section-title span { background: linear-gradient(135deg, #4F46E5, #6366f1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .section-divider { width: 60px; height: 3px; background: linear-gradient(90deg, #F59E0B, #fbbf24); border-radius: 2px; margin: 12px auto 40px; }
+        .section-sub { text-align: center; font-size: 1.05rem; color: var(--gray-500); margin-bottom: 48px; max-width: 640px; margin-left: auto; margin-right: auto; }
+        .section-dark .section-sub { color: var(--gray-400); }
+
+        /* WHAT'S INSIDE */
+        .inside-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 960px; margin: 0 auto; }
+        .inside-card { background: #fff; border: 1px solid var(--gray-200); border-top: 3px solid var(--primary); border-radius: var(--radius); padding: 28px 24px; display: flex; gap: 16px; align-items: flex-start; transition: all 0.25s; }
+        .inside-card:hover { border-color: var(--primary-light); box-shadow: 0 20px 60px rgba(79,70,229,0.15); transform: translateY(-2px); }
+        .inside-icon { font-size: 1.8rem; flex-shrink: 0; margin-top: 2px; }
+        .inside-card h4 { font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 6px; }
+        .inside-card p { font-size: 0.88rem; color: var(--gray-600); line-height: 1.6; }
+
+        /* WHY IT WORKS (dark) */
+        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
+        .why-card { padding: 28px; border-radius: var(--radius); border: 1px solid rgba(99,102,241,0.3); background: rgba(255,255,255,0.04); transition: all 0.25s; }
+        .why-card:hover { box-shadow: 0 0 30px rgba(99,102,241,0.2); border-color: rgba(99,102,241,0.5); }
+        .why-card .why-ic { font-size: 1.8rem; margin-bottom: 10px; }
+        .why-card h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; color: #fff; }
+        .why-card p { color: var(--gray-400); font-size: 0.88rem; }
+
+        /* BUY BOX */
+        .buy-box { max-width: 540px; margin: 0 auto; background: #fff; border: 2px solid var(--primary); border-radius: 16px; padding: 40px 36px; text-align: center; box-shadow: 0 16px 60px rgba(79,70,229,0.15); }
+        .buy-box .price-row { margin-bottom: 6px; }
+        .buy-box .price-amount { font-size: 3.4rem; font-weight: 900; color: var(--primary); letter-spacing: -0.04em; }
+        .buy-box .price-desc { color: var(--gray-500); font-size: 0.9rem; margin-bottom: 28px; }
+        .buy-box ul { list-style: none; margin-bottom: 32px; text-align: left; }
+        .buy-box ul li { padding: 8px 0; padding-left: 26px; position: relative; font-size: 0.93rem; color: var(--gray-700); border-bottom: 1px solid var(--gray-100); }
+        .buy-box ul li:last-child { border-bottom: none; }
+        .buy-box ul li::before { content: "✓"; position: absolute; left: 0; color: var(--green); font-weight: 700; }
+        .buy-box .btn { width: 100%; text-align: center; font-size: 1.15rem; padding: 18px 28px; }
+        .buy-box .guarantee { margin-top: 16px; font-size: 0.8rem; color: var(--gray-500); }
+
+        /* FAQ */
+        .faq-list { max-width: 720px; margin: 0 auto; }
+        .faq-item { margin-bottom: 14px; background: #fff; border-radius: var(--radius); border: 1px solid var(--gray-200); overflow: hidden; }
+        .faq-question { padding: 20px 26px; font-size: 1rem; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; }
+        .faq-question::after { content: "+"; font-size: 1.4rem; color: var(--primary); transition: transform 0.2s; }
+        .faq-item.open .faq-question::after { content: "−"; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        .faq-item.open .faq-answer { max-height: 360px; }
+        .faq-answer-inner { padding: 0 26px 20px; color: var(--gray-600); font-size: 0.93rem; line-height: 1.7; }
+
+        /* FOOTER */
+        footer { padding: 36px 24px; background: var(--dark); text-align: center; color: var(--gray-500); font-size: 0.85rem; }
+        footer a { color: var(--primary-light); text-decoration: none; }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .guide-hero-text h1 { font-size: 2.2rem; }
+            .guide-hero .container { flex-direction: column-reverse; gap: 40px; }
+            .term-mock { width: 100%; }
+            .section-title { font-size: 2rem; }
+            .buy-box { padding: 32px 24px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+    <a href="/" class="brand">
+        <svg width="32" height="32" viewBox="-70 -70 140 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="0" cy="0" r="58" fill="none" stroke="#818CF8" stroke-width="1.5"/>
+            <circle cx="0" cy="0" r="44" fill="none" stroke="#A78BFA" stroke-width="1" opacity="0.6"/>
+            <circle cx="0" cy="0" r="30" fill="#818CF8"/>
+            <text x="0" y="12" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700" font-size="36" fill="white">R</text>
+            <circle cx="0" cy="-58" r="4" fill="#818CF8"/><circle cx="58" cy="0" r="4" fill="#818CF8"/>
+            <circle cx="0" cy="58" r="4" fill="#818CF8"/><circle cx="-58" cy="0" r="4" fill="#818CF8"/>
+        </svg>
+        Ryan's <span>AI Setup</span>
+    </a>
+    <a href="/products.html" class="nav-back">← All Products</a>
+</nav>
+
+<!-- HERO -->
+<section class="guide-hero">
+    <div class="container">
+        <div class="guide-hero-text">
+            <div class="badge">🚀 Flagship · Self-Serve · ~10-Minute Setup</div>
+            <h1>The <span>Hermes Stack</span></h1>
+            <div class="hero-divider"></div>
+            <p class="sub">Your complete AI teammate — installed, configured, and ready in about 10 minutes. One command sets up the agent, persistent memory, code intelligence, workflow automation, and 20+ professional skills. Your AI, your machine, your data.</p>
+            <div class="price-display">
+                <span class="price-big">$1,497</span>
+                <span class="price-label">One-time · Lifetime updates included</span>
+            </div>
+            <a href="https://buy.stripe.com/eVq14fezG9PZ1q6a8ggQE0b" class="btn btn-primary btn-lg">Get the Hermes Stack →</a>
+            <p style="margin-top:14px; font-size:0.85rem; opacity:0.75;">Secure checkout via Stripe. Self-serve — no call needed.</p>
+        </div>
+        <div class="term-mock">
+            <div class="term-window">
+                <div class="term-bar">
+                    <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+                    <span class="term-title">hermes-stack — install</span>
+                </div>
+                <div class="term-body">
+                    <div class="cmd"><span class="p">$</span> bash install-hermes.sh</div>
+                    <div class="ok">✓ Hermes Agent &amp; Claude Code</div>
+                    <div class="ok">✓ Persistent memory</div>
+                    <div class="ok">✓ CodeGraph code intelligence</div>
+                    <div class="ok">✓ n8n workflow automation</div>
+                    <div class="ok">✓ 20+ professional skills</div>
+                    <div class="ok">✓ Smart model routing</div>
+                    <div class="dim">Ready in ~10 minutes. Your AI teammate is live.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section class="section" id="inside">
+    <div class="container">
+        <h2 class="section-title">What's in the Stack</h2>
+        <div class="section-divider"></div>
+        <p class="section-sub">Everything a serious AI teammate needs — installed and wired together for you, not a pile of parts you assemble yourself.</p>
+        <div class="inside-grid">
+
+            <div class="inside-card">
+                <div class="inside-icon">🤝</div>
+                <div>
+                    <h4>Hermes Agent + Claude Code</h4>
+                    <p>A persistent AI teammate plus the coding agent that ships real work — installed, connected, and ready to take instructions from minute one.</p>
+                </div>
+            </div>
+
+            <div class="inside-card">
+                <div class="inside-icon">🧠</div>
+                <div>
+                    <h4>Persistent Memory</h4>
+                    <p>Your AI remembers across sessions — decisions, preferences, project context. Stop re-explaining yourself every single time you open a chat.</p>
+                </div>
+            </div>
+
+            <div class="inside-card">
+                <div class="inside-icon">🕸️</div>
+                <div>
+                    <h4>CodeGraph Intelligence</h4>
+                    <p>A pre-indexed knowledge graph of your code. Ask structural questions and get instant, symbol-aware answers — no slow grepping around.</p>
+                </div>
+            </div>
+
+            <div class="inside-card">
+                <div class="inside-icon">⚙️</div>
+                <div>
+                    <h4>Workflow Automation</h4>
+                    <p>n8n wired in so you can automate the repetitive stuff — lead capture, follow-ups, reports — described in plain language and run on autopilot.</p>
+                </div>
+            </div>
+
+            <div class="inside-card">
+                <div class="inside-icon">🧰</div>
+                <div>
+                    <h4>20+ Professional Skills</h4>
+                    <p>A curated library of ready-to-use skills pre-loaded — planning, debugging, writing, handoffs, and more. New skills land with every update.</p>
+                </div>
+            </div>
+
+            <div class="inside-card">
+                <div class="inside-icon">🔀</div>
+                <div>
+                    <h4>Smart Model Routing</h4>
+                    <p>Automatically routes each task to the right model for the job — fast and cheap when that's enough, powerful when it matters. You save without thinking about it.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- WHY IT WORKS -->
+<section class="section section-dark" id="why">
+    <div class="container">
+        <h2 class="section-title">Built in the Open</h2>
+        <div class="section-divider"></div>
+        <p class="section-sub">No hype, no black boxes. Here's why the stack is worth it.</p>
+        <div class="why-grid">
+
+            <div class="why-card">
+                <div class="why-ic">⚙️</div>
+                <h4>Battle-Tested Daily</h4>
+                <p>Every tool runs on Ryan's own machine every day. Nothing ships to you that isn't already proven in real work first.</p>
+            </div>
+
+            <div class="why-card">
+                <div class="why-ic">🔗</div>
+                <h4>Open &amp; Inspectable</h4>
+                <p>The full installer is public on GitHub. See exactly what gets installed before you buy — inspect every line.</p>
+            </div>
+
+            <div class="why-card">
+                <div class="why-ic">⚡</div>
+                <h4>One Command</h4>
+                <p>No config hell, no 12-tab setup guide. Run the installer and the whole stack is live in about 10 minutes.</p>
+            </div>
+
+            <div class="why-card">
+                <div class="why-ic">🔒</div>
+                <h4>Your Machine, Your Data</h4>
+                <p>It all runs locally on your computer. No subscription to us, and your files never leave your machine.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- BUY BOX -->
+<section class="section section-gray" id="buy">
+    <div class="container">
+        <h2 class="section-title">Get the Stack</h2>
+        <div class="section-divider"></div>
+        <div class="buy-box">
+            <div class="price-row">
+                <div class="price-amount">$1,497</div>
+            </div>
+            <p class="price-desc">One-time purchase · Self-serve install · Lifetime updates</p>
+            <ul>
+                <li>Full AI stack installed and configured for you</li>
+                <li>Hermes Agent + Claude Code, ready to work</li>
+                <li>20+ professional skills pre-loaded</li>
+                <li>Persistent memory across every session</li>
+                <li>Instant code understanding with CodeGraph</li>
+                <li>Workflow automation via n8n + natural language</li>
+                <li>Smart model routing to keep costs down</li>
+                <li>Lifetime updates to tools and skills</li>
+            </ul>
+            <a href="https://buy.stripe.com/eVq14fezG9PZ1q6a8ggQE0b" class="btn btn-primary">Get the Hermes Stack — $1,497 →</a>
+            <p class="guarantee">🔒 Secure checkout via Stripe · 14-day money-back guarantee</p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+    <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="section-divider"></div>
+        <p class="section-sub">Straight answers about the stack.</p>
+        <div class="faq-list">
+
+            <div class="faq-item">
+                <div class="faq-question">Do I need to be technical to install it?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">No. The installer does the heavy lifting — if you can run one command in a terminal (and we walk you through that), you're set. The whole point is that you skip the config nightmare and get a working AI teammate in about 10 minutes.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What do I need to run it?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">A Mac or a Windows machine (via WSL) and a Claude account — the free tier works to get started, and Claude Pro (~$20/month from Anthropic) unlocks the most. Everything else the stack needs is installed for you by the installer.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I see what gets installed before I buy?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">Yes. The full Hermes Stack installer is open source on GitHub — you can read exactly what it sets up, line by line, before you spend a dollar. No black boxes.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is this really one-time? What about updates?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">One payment, yours forever — no subscription to us. As the tools and skills improve, you get every update free. The stack you buy today keeps getting better.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Where does my data go?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">It stays on your machine. The stack runs locally, so your files never leave your computer — only the specific text you choose to send to Claude goes to Anthropic, exactly like any other Claude usage.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What if it's not for me?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">14-day money-back guarantee. If the stack isn't a fit, email Ryan within 14 days for a full refund. No questions asked.</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="text-align:center; margin-top:48px;">
+            <p style="color:var(--gray-500); margin-bottom:20px;">Want a custom, multi-agent version for a whole team? That's the <a href="/products.html" style="color:var(--primary); font-weight:600;">Local AI Command Center</a>.</p>
+            <a href="mailto:ryansaisetup@gmail.com" class="btn btn-outline" style="color:var(--primary); border-color:var(--primary);">Email Ryan</a>
+        </div>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section style="background: linear-gradient(135deg, #1e1b4b 0%, #312e81 30%, #4F46E5 65%, #6366f1 100%); padding: 80px 24px; text-align: center; color: #fff; position: relative; overflow: hidden;">
+    <div style="position:absolute; top:-80px; right:-80px; width:400px; height:400px; background:rgba(99,102,241,0.25); border-radius:50%; pointer-events:none;"></div>
+    <div style="position:absolute; bottom:-100px; left:-60px; width:350px; height:350px; background:rgba(245,158,11,0.15); border-radius:50%; pointer-events:none;"></div>
+    <div class="container" style="max-width: 640px; position:relative; z-index:1;">
+        <h2 style="font-size:2.4rem; font-weight:900; margin-bottom:16px; letter-spacing:-0.02em;">Your AI Teammate, Live in 10 Minutes</h2>
+        <p style="font-size:1.1rem; opacity:0.9; margin-bottom:36px;">Stop duct-taping AI tools together. Run one command and get the whole stack — today.</p>
+        <a href="https://buy.stripe.com/eVq14fezG9PZ1q6a8ggQE0b" class="btn btn-primary btn-lg">Get the Hermes Stack — $1,497</a>
+        <p style="margin-top:16px; font-size:0.85rem; opacity:0.7;">Secure checkout · Self-serve install · Lifetime updates</p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p><strong>Ryan's AI Setup</strong> &mdash; Self-Serve AI Products, Website Builds &amp; Local AI Installation</p>
+    <p style="margin-top:8px;"><a href="/">Home</a> &middot; <a href="/products.html">Products</a> &middot; <a href="/guide.html">Guide</a></p>
+    <p style="margin-top:16px;">&copy; 2026 Ryan's AI Setup. All rights reserved.</p>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-question').forEach(function(q) {
+    q.addEventListener('click', function() { this.parentElement.classList.toggle('open'); });
+});
+</script>
+</body>
+</html>
