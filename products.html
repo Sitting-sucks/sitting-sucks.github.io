@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products & Tools | Ryan's AI Setup</title>
-    <meta name="description" content="Digital products and tools built by Ryan's AI Setup — skills packs, guides, and AI tools for your business.">
+    <meta name="description" content="Self-serve digital products built by Ryan's AI Setup — AI tools, guides, and complete stacks. Buy once, use forever. No meetings required.">
     <meta property="og:title" content="Products & Tools | Ryan's AI Setup">
-    <meta property="og:description" content="Digital tools, skills packs, and AI products built by Ryan and his AI team.">
+    <meta property="og:description" content="Self-serve AI products — buy once, use forever. No calls, no waiting, just results.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://ryansaisetup.com/og-image.png">
     <meta property="og:url" content="https://ryansaisetup.com/products.html">
@@ -33,6 +33,7 @@
             --gray-600: #4B5563;
             --gray-700: #374151;
             --green: #10B981;
+            --green-dark: #059669;
             --radius: 12px;
         }
         html { scroll-behavior: smooth; }
@@ -44,7 +45,7 @@
         }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
-        /* NAV (same as main site) */
+        /* NAV */
         .nav { background: linear-gradient(135deg, #0f0e1a, #111827); padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(99,102,241,0.2); }
         .nav .brand { color: #fff; font-size: 1.2rem; font-weight: 800; text-decoration: none; letter-spacing: -0.02em; display: flex; align-items: center; gap: 10px; }
         .nav .brand span { color: var(--primary-light); }
@@ -87,6 +88,7 @@
         .product-card .features li::before { content: "\2713"; position: absolute; left: 0; color: var(--green); font-weight: 700; }
         .product-price { font-size: 2rem; font-weight: 900; color: var(--primary); margin-bottom: 4px; }
         .product-price-note { font-size: 0.82rem; color: var(--gray-500); margin-bottom: 20px; }
+        .self-serve-tag { display: inline-block; padding: 3px 10px; background: rgba(16,185,129,0.1); color: var(--green-dark); border-radius: 50px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; }
         .product-card .btn { display: inline-block; padding: 14px 28px; font-size: 0.92rem; font-weight: 700; text-decoration: none; border-radius: 10px; transition: all 0.2s; cursor: pointer; border: none; font-family: inherit; text-align: center; }
         .btn-primary { background: var(--accent); color: var(--dark); box-shadow: 0 4px 14px rgba(245,158,11,0.3); }
         .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); }
@@ -96,6 +98,19 @@
         .btn-dark:hover { background: var(--primary-dark); transform: translateY(-2px); }
         .btn-green { background: var(--green); color: #fff; }
         .btn-green:hover { background: #059669; transform: translateY(-2px); }
+
+        /* SELF-SERVE BANNER */
+        .self-serve-banner { max-width: 750px; margin: 0 auto 56px; padding: 28px 32px; border-radius: var(--radius); background: linear-gradient(135deg, rgba(16,185,129,0.08), rgba(79,70,229,0.06)); border: 1px solid rgba(16,185,129,0.2); text-align: center; }
+        .self-serve-banner p { font-size: 0.95rem; color: var(--gray-700); line-height: 1.6; }
+        .self-serve-banner strong { color: var(--green-dark); }
+
+        /* NEED HELP SECTION */
+        .need-help { max-width: 580px; margin: 60px auto 0; padding: 32px; border-radius: var(--radius); background: linear-gradient(135deg, rgba(245,158,11,0.05), rgba(79,70,229,0.05)); border: 1px solid var(--gray-200); text-align: center; }
+        .need-help h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; color: var(--gray-700); }
+        .need-help p { font-size: 0.9rem; color: var(--gray-500); margin-bottom: 16px; line-height: 1.5; }
+        .need-help .limited-badge { display: inline-block; padding: 3px 12px; background: rgba(245,158,11,0.12); color: var(--accent-hover); border-radius: 50px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 14px; }
+        .need-help .btn { display: inline-block; padding: 10px 24px; font-size: 0.85rem; font-weight: 600; text-decoration: none; border-radius: 8px; transition: all 0.2s; background: transparent; color: var(--primary); border: 2px solid var(--primary); font-family: inherit; cursor: pointer; }
+        .need-help .btn:hover { background: var(--primary); color: #fff; }
 
         /* BUILT BY SECTION */
         .built-by { text-align: center; max-width: 650px; margin: 56px auto 0; padding: 32px; border-radius: var(--radius); background: linear-gradient(135deg, rgba(79,70,229,0.06), rgba(147,51,234,0.06)); border: 1px solid var(--gray-200); }
@@ -144,8 +159,7 @@
         <li><a href="/products.html" class="active">Products</a></li>
         <li><a href="/guide.html">Guide</a></li>
         <li><a href="/#about">About</a></li>
-        <li><a href="#newsletter">Updates</a></li>
-        <li><a href="https://cal.com/ryansaisetup/consultation" class="nav-cta">Book a Free Call</a></li>
+        <li><a href="https://cal.com/ryansaisetup/command-center" class="nav-cta">Command Center</a></li>
     </ul>
 </nav>
 
@@ -154,7 +168,7 @@
     <div class="container">
         <h1>Products &amp; Tools</h1>
         <div class="hero-divider"></div>
-        <p class="sub">Digital tools, skills, and guides built by Ryan and his AI team. Buy once, use forever.</p>
+        <p class="sub">Self-serve AI products. Buy once, install yourself, use forever. No calls. No waiting. Just results.</p>
     </div>
 </section>
 
@@ -163,12 +177,17 @@
     <div class="container">
         <h2 class="section-title"><span>Available Now</span></h2>
         <div class="section-divider"></div>
-        <p class="section-sub">Ready to download. Ready to use.</p>
+
+        <!-- Self-Serve Banner -->
+        <div class="self-serve-banner">
+            <p><strong>Every product below is self-serve.</strong> Buy → download → use. No consultation call. No scheduling. No back-and-forth. The software does the work — you get the result immediately.</p>
+        </div>
 
         <div class="products-grid">
 
             <!-- The Complete Claude Guide -->
             <div class="product-card">
+                <div class="self-serve-tag">⚡ Self-Serve</div>
                 <div class="product-icon">📘</div>
                 <h3>The Complete Claude Guide</h3>
                 <p class="tagline">Master Claude AI — no tech background required</p>
@@ -188,6 +207,7 @@
             <!-- Hermes Stack -->
             <div class="product-card featured">
                 <div class="badge">Best Seller</div>
+                <div class="self-serve-tag">⚡ Self-Serve</div>
                 <div class="product-icon">🚀</div>
                 <h3>Hermes Stack</h3>
                 <p class="tagline">Your complete AI teammate — one command, full arsenal</p>
@@ -201,29 +221,38 @@
                     <li>Lifetime updates to tools and skills</li>
                 </ul>
                 <div class="product-price">$1,497</div>
-                <div class="product-price-note">One-time. Lifetime updates included.</div>
+                <div class="product-price-note">One-time. Lifetime updates included. 10-minute setup.</div>
                 <a href="https://buy.stripe.com/eVq14fezG9PZ1q6a8ggQE0b" class="btn btn-primary">Buy Now — $1,497</a>
             </div>
 
-            <!-- Claude AI Setup (link to main service) -->
+            <!-- Local AI Command Center -->
             <div class="product-card">
-                <div class="product-icon">⚡</div>
-                <h3>Claude AI Setup Service</h3>
-                <p class="tagline">I install and configure Claude on your computer</p>
-                <p class="description">Personal AI assistant installed on your Mac or PC. Claude Code, Desktop App, personalized memory, and a 45-minute training session. You'll be up and running today.</p>
+                <div class="product-icon">🏗️</div>
+                <h3>Local AI Command Center</h3>
+                <p class="tagline">Custom-built AI infrastructure for your business</p>
+                <p class="description">Bespoke local AI deployment — Hermes Stack on steroids. Multi-agent systems, custom workflows, enterprise-grade memory, and dedicated hardware if needed. Built to your specs.</p>
                 <ul class="features">
-                    <li>Claude Code &amp; Desktop App installed</li>
-                    <li>Personalized AI memory setup</li>
-                    <li>45-minute training walkthrough</li>
-                    <li>Includes The Complete Claude Guide ($29 value)</li>
-                    <li>14-day email support</li>
+                    <li>Custom AI architecture designed for your business</li>
+                    <li>Multi-agent orchestration for complex workflows</li>
+                    <li>Private, local-first — your data stays with you</li>
+                    <li>Enterprise-grade memory and tool integration</li>
+                    <li>Hardware procurement and setup included</li>
                 </ul>
-                <div class="product-price">$399</div>
-                <div class="product-price-note">One-time fee + Claude Pro subscription (~$20/mo)</div>
-                <a href="https://buy.stripe.com/28EdR177e2nx5Gm1BKgQE04" class="btn btn-outline">Buy Setup — $399</a>
+                <div class="product-price">$2,500–$25k+</div>
+                <div class="product-price-note">Custom quote. Includes hardware, setup, and training.</div>
+                <a href="https://cal.com/ryansaisetup/command-center" class="btn btn-outline">Book a Consult →</a>
             </div>
 
         </div>
+
+        <!-- NEED HELP? -->
+        <div class="need-help">
+            <div class="limited-badge">⚡ 2 Slots Per Week</div>
+            <h3>Need help deciding?</h3>
+            <p>If you're spending $1,500+ and want to talk it through, Ryan takes 2 consultation calls per week. No sales pitch — just straight answers.</p>
+            <a href="https://cal.com/ryansaisetup/consultation" class="btn">Book a Call (Limited)</a>
+        </div>
+
     </div>
 </section>
 
@@ -244,24 +273,30 @@
                 <p>Pre-built n8n automation templates for common business workflows — lead capture, follow-ups, invoicing, reporting.</p>
                 <span class="coming-badge">In Development</span>
             </div>
+            <div class="coming-card">
+                <h4>Website Builds</h4>
+                <p>Custom websites built by Ryan + AI. From $1,500. Fast, modern, and fully managed.</p>
+                <span class="coming-badge">Coming Q2</span>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- NEWSLETTER -->
-<section class="section" id="newsletter">
-    <div class="container" style="text-align:center; max-width: 580px;">
-        <h2 style="font-size:1.8rem; font-weight:800; margin-bottom:10px;">Get Product Updates</h2>
-        <p style="font-size:1.05rem; color:var(--gray-500); margin-bottom:28px;">Be the first to know when new tools and products launch.</p>
-        <p style="font-size:0.9rem; color:var(--gray-400); margin-bottom:8px;">No spam. Unsubscribe anytime. New products every month.</p>
-        <p style="font-size:0.82rem; color:var(--gray-400);">For now, send an email to <a href="mailto:ryansaisetup@gmail.com?subject=Product%20Updates" style="color:var(--primary-light);">ryansaisetup@gmail.com</a> with subject "Product Updates" to join the list.</p>
+<!-- BUILT BY -->
+<section class="section section-gray">
+    <div class="container">
+        <div class="built-by">
+            <h3>Built by Ryan + an AI teammate that never sleeps</h3>
+            <p>Every product on this page was built, tested, and shipped by a human-AI duo. Ryan brings the vision and the business instinct. Hermes brings the execution engine. Together, they ship faster than any solo developer could.</p>
+            <span class="tag">Human + AI Built</span>
+        </div>
     </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
     <p>&copy; 2026 Ryan's AI Setup. Built by Ryan + an AI teammate who never sleeps.</p>
-    <p style="margin-top:6px;"><a href="/">Home</a> · <a href="/products.html">Products</a> · <a href="/guide.html">Guide</a> · <a href="https://cal.com/ryansaisetup/consultation">Book a Call</a></p>
+    <p style="margin-top:6px;"><a href="/">Home</a> · <a href="/products.html">Products</a> · <a href="/guide.html">Guide</a> · <a href="https://cal.com/ryansaisetup/command-center">Command Center</a></p>
 </footer>
 
 </body>
