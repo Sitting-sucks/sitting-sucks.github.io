@@ -155,6 +155,9 @@
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); padding: 20px; gap: 16px; border-top: 1px solid rgba(255,255,255,0.05); }
+            .menu-toggle { display: block; }
             .guide-hero-text h1 { font-size: 2.2rem; }
             .guide-hero .container { flex-direction: column-reverse; gap: 40px; }
             .term-mock { width: 100%; }
@@ -203,6 +206,7 @@
             </div>
             <a href="https://buy.stripe.com/eVq14fezG9PZ1q6a8ggQE0b" class="btn btn-primary btn-lg">Get the Hermes Stack →</a>
             <p style="margin-top:14px; font-size:0.85rem; opacity:0.75;">Secure checkout via Stripe. Self-serve — no call needed.</p>
+            <p style="margin-top:10px; font-size:0.9rem; opacity:0.85;">Questions before you buy? Call or text <a href="tel:+19295015423" style="color:var(--accent-light); font-weight:700;">(929) 501-5423</a>.</p>
         </div>
         <div class="term-mock">
             <div class="term-window">
@@ -303,6 +307,7 @@
                 <div class="why-ic">🔗</div>
                 <h4>Open &amp; Inspectable</h4>
                 <p>The full installer is public on GitHub. See exactly what gets installed before you buy — inspect every line.</p>
+                <p style="margin-top:10px;"><a href="https://github.com/Sitting-sucks/hermes-stack" target="_blank" rel="noopener" style="color:var(--primary-light); font-weight:700;">View on GitHub →</a></p>
             </div>
 
             <div class="why-card">
