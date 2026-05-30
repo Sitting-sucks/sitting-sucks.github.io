@@ -9,6 +9,9 @@
     <meta property="og:description" content="One command installs the whole stack: agent, memory, code intelligence, automation, 20+ skills. Self-serve, 10-minute setup, lifetime updates. $1,497 one-time.">
     <meta property="og:type" content="product">
     <meta property="og:image" content="https://ryansaisetup.com/og-image.png">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <meta property="og:url" content="https://ryansaisetup.com/hermes-stack.html">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="The Hermes Stack — $1,497">
@@ -54,6 +57,13 @@
         .nav .brand span { color: var(--primary-light); }
         .nav-back { color: var(--gray-400); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; display: flex; align-items: center; gap: 6px; }
         .nav-back:hover { color: #fff; }
+        .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+        .nav-links a { color: var(--gray-400); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
+        .nav-links a:hover { color: #fff; }
+        .nav-links a.active { color: #fff; font-weight: 600; }
+        .nav-links .nav-cta { background: var(--accent); color: var(--dark) !important; padding: 8px 20px; border-radius: 8px; font-weight: 700; font-size: 0.85rem; transition: background 0.2s; }
+        .nav-links .nav-cta:hover { background: var(--accent-hover); }
+        .menu-toggle { display: none; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; }
 
         /* HERO */
         .guide-hero { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 30%, #4F46E5 65%, #6366f1 100%); color: #fff; padding: 80px 24px; position: relative; overflow: hidden; }
@@ -168,7 +178,15 @@
         </svg>
         Ryan's <span>AI Setup</span>
     </a>
-    <a href="/products.html" class="nav-back">← All Products</a>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/products.html">Products</a></li>
+        <li><a href="/guide.html">Guide</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="/hermes-stack.html" class="nav-cta active">Get Hermes Stack</a></li>
+    </ul>
 </nav>
 
 <!-- HERO -->
@@ -403,7 +421,7 @@
 <!-- FOOTER -->
 <footer>
     <p><strong>Ryan's AI Setup</strong> &mdash; Self-Serve AI Products, Website Builds &amp; Local AI Installation</p>
-    <p style="margin-top:8px;"><a href="/">Home</a> &middot; <a href="/products.html">Products</a> &middot; <a href="/guide.html">Guide</a></p>
+    <p style="margin-top:8px;"><a href="/">Home</a> &middot; <a href="/products.html">Products</a> &middot; <a href="/guide.html">Guide</a> &middot; <a href="/policy.html">Privacy &amp; Refund</a></p>
     <p style="margin-top:16px;">&copy; 2026 Ryan's AI Setup. All rights reserved.</p>
 </footer>
 
