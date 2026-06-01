@@ -12,8 +12,8 @@
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <!-- Plausible Analytics (privacy-friendly, no cookies). Outbound-links variant auto-tracks Stripe/checkout click-through. -->
-    <script defer data-domain="ryansaisetup.com" src="https://plausible.io/js/script.outbound-links.js"></script>
+    <!-- Plausible Analytics (privacy-friendly, no cookies). tagged-events + outbound-links variant: auto-tracks outbound clicks AND fires tagged custom goals (Purchase / Booking, tagged by product) via CSS classes. -->
+    <script defer data-domain="ryansaisetup.com" src="https://plausible.io/js/script.tagged-events.outbound-links.js"></script>
     <meta property="og:url" content="https://ryansaisetup.com/">
     <meta property="og:site_name" content="Ryan's AI Setup">
     <meta name="twitter:card" content="summary_large_image">
@@ -487,7 +487,7 @@
                     <li>You own all the code &mdash; no platform lock-in</li>
                 </ul>
                 <p style="font-size:0.82rem; color:var(--gray-500); margin-bottom:20px; padding:0 4px;">Every site is custom. Ryan does one short scoping call to nail down exactly what you need, then it gets built and shipped.</p>
-                <a href="https://cal.com/ryansaisetup/consultation" class="btn btn-dark">Book a Scoping Call</a>
+                <a href="https://cal.com/ryansaisetup/consultation" class="btn btn-dark plausible-event-name=Booking plausible-event-product=website-build">Book a Scoping Call</a>
             </div>
 
             <!-- HERMES STACK (FLAGSHIP) -->
@@ -509,7 +509,7 @@
                     <li>Lifetime updates to tools and skills</li>
                 </ul>
                 <span class="scarcity-tag">⚡ Self-serve &mdash; instant access, no call needed</span>
-                <a href="https://buy.stripe.com/eVq14fezG9PZ1q6a8ggQE0b" class="btn btn-primary">Get the Hermes Stack &mdash; $1,497</a>
+                <a href="https://buy.stripe.com/eVq14fezG9PZ1q6a8ggQE0b" class="btn btn-primary plausible-event-name=Purchase plausible-event-product=hermes-stack">Get the Hermes Stack &mdash; $1,497</a>
             </div>
 
             <!-- COMMAND CENTER -->
@@ -530,7 +530,7 @@
                     <li>60-day priority support + tune-up sessions</li>
                 </ul>
                 <p style="font-size:0.82rem; color:var(--gray-500); margin-bottom:20px; padding:0 4px;"><b>Individual:</b> from $2,500 + hardware (~$599&ndash;$3,699). <b>Enterprise (teams &amp; offices):</b> $5,000&ndash;$25,000+ including multi-user setup, network config, security hardening, and full-day workshop.</p>
-                <a href="https://cal.com/ryansaisetup/consultation" class="btn btn-dark">Book a Consult</a>
+                <a href="https://cal.com/ryansaisetup/consultation" class="btn btn-dark plausible-event-name=Booking plausible-event-product=command-center">Book a Consult</a>
             </div>
         </div>
 
@@ -615,7 +615,7 @@
                     <li>How to connect your tools (email, calendar, files, and more)</li>
                     <li>Tips and tricks that save hours every week</li>
                 </ul>
-                <a href="https://buy.stripe.com/5kQcMXgHO3rB4Ci1BKgQE07" class="btn btn-green">Buy the Guide &mdash; $29</a>
+                <a href="https://buy.stripe.com/5kQcMXgHO3rB4Ci1BKgQE07" class="btn btn-green plausible-event-name=Purchase plausible-event-product=claude-guide">Buy the Guide &mdash; $29</a>
                 <p style="font-size:0.82rem; color:var(--gray-500); margin-top:10px;">Instant digital download. PDF format.</p>
             </div>
             <div class="guide-visual">
@@ -683,7 +683,7 @@
     <div class="container">
         <h2>Ready to Put AI to Work?</h2>
         <p class="sub">Grab the Hermes Stack and have your AI teammate running in 10 minutes &mdash; or reach out if you want a custom site or Command Center.</p>
-        <a href="https://buy.stripe.com/eVq14fezG9PZ1q6a8ggQE0b" class="btn btn-primary" style="font-size:1.15rem; padding:18px 44px;">Get the Hermes Stack &mdash; $1,497</a>
+        <a href="https://buy.stripe.com/eVq14fezG9PZ1q6a8ggQE0b" class="btn btn-primary plausible-event-name=Purchase plausible-event-product=hermes-stack" style="font-size:1.15rem; padding:18px 44px;">Get the Hermes Stack &mdash; $1,497</a>
         <div class="contact-grid">
             <div class="contact-block">
                 <div class="label">Email</div>
@@ -703,7 +703,7 @@
         <h2>New to This? Start With the $29 Guide</h2>
         <p class="sub">The Complete Claude Guide walks you through every command, agent, and workflow in plain English &mdash; 80+ pages, instant download. The fastest, cheapest way to see what AI can really do for you.</p>
         <p class="sub-small">Read it, put it to work, then level up to the Hermes Stack when you're ready.</p>
-        <a href="https://buy.stripe.com/5kQcMXgHO3rB4Ci1BKgQE07" class="btn btn-primary" style="margin-top:8px;">Get the Guide &mdash; $29</a>
+        <a href="https://buy.stripe.com/5kQcMXgHO3rB4Ci1BKgQE07" class="btn btn-primary plausible-event-name=Purchase plausible-event-product=claude-guide" style="margin-top:8px;">Get the Guide &mdash; $29</a>
         <p class="email-note">🔒 Instant PDF download. Read on any device.</p>
     </div>
 </section>
@@ -719,7 +719,7 @@
 <!-- STICKY MOBILE CTA BAR -->
 <div class="sticky-cta-bar" id="stickyCta">
     <p>Ready to get started?</p>
-    <a href="https://cal.com/ryansaisetup/consultation" class="btn btn-primary">Book Free Call</a>
+    <a href="https://cal.com/ryansaisetup/consultation" class="btn btn-primary plausible-event-name=Booking plausible-event-product=consultation">Book Free Call</a>
 </div>
 
 <script>

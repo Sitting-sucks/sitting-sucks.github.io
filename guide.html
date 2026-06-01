@@ -12,8 +12,8 @@
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <!-- Plausible Analytics (privacy-friendly, no cookies). Outbound-links variant auto-tracks Stripe/checkout click-through. -->
-    <script defer data-domain="ryansaisetup.com" src="https://plausible.io/js/script.outbound-links.js"></script>
+    <!-- Plausible Analytics (privacy-friendly, no cookies). tagged-events + outbound-links variant: auto-tracks outbound clicks AND fires tagged custom goals (Purchase / Booking, tagged by product) via CSS classes. -->
+    <script defer data-domain="ryansaisetup.com" src="https://plausible.io/js/script.tagged-events.outbound-links.js"></script>
     <meta property="og:url" content="https://ryansaisetup.com/guide.html">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="The Complete Claude Guide — $29">
@@ -203,7 +203,7 @@
                 <span class="price-big">$29</span>
                 <span class="price-label">One-time · Instant PDF download</span>
             </div>
-            <a href="https://buy.stripe.com/5kQcMXgHO3rB4Ci1BKgQE07" class="btn btn-primary btn-lg">Buy Now for $29 →</a>
+            <a href="https://buy.stripe.com/5kQcMXgHO3rB4Ci1BKgQE07" class="btn btn-primary btn-lg plausible-event-name=Purchase plausible-event-product=claude-guide">Buy Now for $29 →</a>
             <p style="margin-top:14px; font-size:0.85rem; opacity:0.75;">Secure checkout via Stripe. PDF delivered instantly to your email.</p>
         </div>
         <div class="book-mockup">
@@ -306,7 +306,7 @@
                 <li>Tool connection tutorials</li>
                 <li>Instant delivery to your email</li>
             </ul>
-            <a href="https://buy.stripe.com/5kQcMXgHO3rB4Ci1BKgQE07" class="btn btn-primary">Buy the Guide — $29 →</a>
+            <a href="https://buy.stripe.com/5kQcMXgHO3rB4Ci1BKgQE07" class="btn btn-primary plausible-event-name=Purchase plausible-event-product=claude-guide">Buy the Guide — $29 →</a>
             <p class="guarantee">🔒 Secure checkout via Stripe. Instant PDF delivery.</p>
         </div>
     </div>
@@ -357,7 +357,7 @@
     <div class="container" style="max-width: 640px; position:relative; z-index:1;">
         <h2 style="font-size:2.4rem; font-weight:900; margin-bottom:16px; letter-spacing:-0.02em;">Get the Guide Today for $29</h2>
         <p style="font-size:1.1rem; opacity:0.9; margin-bottom:36px;">Stop guessing with Claude. Start doing more in less time, starting today.</p>
-        <a href="https://buy.stripe.com/5kQcMXgHO3rB4Ci1BKgQE07" class="btn btn-primary btn-lg">Buy Now — Instant Download</a>
+        <a href="https://buy.stripe.com/5kQcMXgHO3rB4Ci1BKgQE07" class="btn btn-primary btn-lg plausible-event-name=Purchase plausible-event-product=claude-guide">Buy Now — Instant Download</a>
         <p style="margin-top:16px; font-size:0.85rem; opacity:0.7;">Secure checkout · PDF delivery · One-time $29</p>
     </div>
 </section>

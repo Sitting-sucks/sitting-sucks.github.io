@@ -12,8 +12,8 @@
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <!-- Plausible Analytics (privacy-friendly, no cookies). Outbound-links variant auto-tracks Stripe/checkout click-through. -->
-    <script defer data-domain="ryansaisetup.com" src="https://plausible.io/js/script.outbound-links.js"></script>
+    <!-- Plausible Analytics (privacy-friendly, no cookies). tagged-events + outbound-links variant: auto-tracks outbound clicks AND fires tagged custom goals (Purchase / Booking, tagged by product) via CSS classes. -->
+    <script defer data-domain="ryansaisetup.com" src="https://plausible.io/js/script.tagged-events.outbound-links.js"></script>
     <meta property="og:url" content="https://ryansaisetup.com/hermes-stack.html">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="The Hermes Stack — $1,497">
@@ -206,7 +206,7 @@
                 <span class="price-big">$1,497</span>
                 <span class="price-label">One-time · Lifetime updates included</span>
             </div>
-            <a href="https://buy.stripe.com/eVq14fezG9PZ1q6a8ggQE0b" class="btn btn-primary btn-lg">Get the Hermes Stack →</a>
+            <a href="https://buy.stripe.com/eVq14fezG9PZ1q6a8ggQE0b" class="btn btn-primary btn-lg plausible-event-name=Purchase plausible-event-product=hermes-stack">Get the Hermes Stack →</a>
             <p style="margin-top:14px; font-size:0.85rem; opacity:0.75;">Secure checkout via Stripe. Self-serve — no call needed.</p>
             <p style="margin-top:10px; font-size:0.9rem; opacity:0.85;">Questions before you buy? Call or text <a href="tel:+19295015423" style="color:var(--accent-light); font-weight:700;">(929) 501-5423</a>.</p>
         </div>
@@ -348,7 +348,7 @@
                 <li>Smart model routing to keep costs down</li>
                 <li>Lifetime updates to tools and skills</li>
             </ul>
-            <a href="https://buy.stripe.com/eVq14fezG9PZ1q6a8ggQE0b" class="btn btn-primary">Get the Hermes Stack — $1,497 →</a>
+            <a href="https://buy.stripe.com/eVq14fezG9PZ1q6a8ggQE0b" class="btn btn-primary plausible-event-name=Purchase plausible-event-product=hermes-stack">Get the Hermes Stack — $1,497 →</a>
             <p class="guarantee">🔒 Secure checkout via Stripe · 14-day money-back guarantee</p>
         </div>
     </div>
@@ -420,7 +420,7 @@
     <div class="container" style="max-width: 640px; position:relative; z-index:1;">
         <h2 style="font-size:2.4rem; font-weight:900; margin-bottom:16px; letter-spacing:-0.02em;">Your AI Teammate, Live in 10 Minutes</h2>
         <p style="font-size:1.1rem; opacity:0.9; margin-bottom:36px;">Stop duct-taping AI tools together. Run one command and get the whole stack — today.</p>
-        <a href="https://buy.stripe.com/eVq14fezG9PZ1q6a8ggQE0b" class="btn btn-primary btn-lg">Get the Hermes Stack — $1,497</a>
+        <a href="https://buy.stripe.com/eVq14fezG9PZ1q6a8ggQE0b" class="btn btn-primary btn-lg plausible-event-name=Purchase plausible-event-product=hermes-stack">Get the Hermes Stack — $1,497</a>
         <p style="margin-top:16px; font-size:0.85rem; opacity:0.7;">Secure checkout · Self-serve install · Lifetime updates</p>
     </div>
 </section>
